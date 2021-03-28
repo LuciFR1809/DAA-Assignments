@@ -1,0 +1,174 @@
+\hypertarget{classRectangle}{}\doxysection{Rectangle Class Reference}
+\label{classRectangle}\index{Rectangle@{Rectangle}}
+
+
+Class representing physical rectangles.  
+
+
+
+
+{\ttfamily \#include $<$rectangle.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRectangle_a8a933e0ebd9e80ce91e61ffe87fd577e}\label{classRectangle_a8a933e0ebd9e80ce91e61ffe87fd577e}} 
+\mbox{\hyperlink{classRectangle_a8a933e0ebd9e80ce91e61ffe87fd577e}{Rectangle}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRectangle_a49c62f0e0933e9959ff142edad98d28d}{Rectangle}} (\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classRectangle_aa4de1b99211383812eb42200888d91e6}{x\+\_\+left}}, \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classRectangle_aca3d912e91a9549a33c2cdfdc8581add}{x\+\_\+right}}, \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classRectangle_a2e9ea7596c2e5ed0a8cb16214669c0c1}{y\+\_\+top}}, \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classRectangle_a842578e0d765a47bd3db9cadef7fe691}{y\+\_\+bottom}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize rectangle using four coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRectangle_add441f722106d6dd4ac9c95bb1f58a84}{Rectangle}} (\mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classRectangle_a12399dc819c0587bfe2fb300e57faa56}{x\+\_\+interval}}, \mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classRectangle_ac2e02a76c952cd473371cdd81298e834}{y\+\_\+interval}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize rectangle using two intervals. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRectangle_ab4e7f45b3910008196ba861cb3e14236}{Rectangle}} (\mbox{\hyperlink{classPoint}{Point}} \mbox{\hyperlink{classRectangle_a5c37d1f5a8674cd438e59e0686be1976}{top\+\_\+left}}, \mbox{\hyperlink{classPoint}{Point}} \mbox{\hyperlink{classRectangle_aef5dfe96f06005ab2696ae2bf0e71315}{top\+\_\+right}}, \mbox{\hyperlink{classPoint}{Point}} \mbox{\hyperlink{classRectangle_abfef96b8b69b908717277b57235e49e3}{bottom\+\_\+left}}, \mbox{\hyperlink{classPoint}{Point}} \mbox{\hyperlink{classRectangle_a16df1e2a2d442dc538389921e1656118}{bottom\+\_\+right}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize rectangle using four points. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRectangle_a69c32ce12cff5e01c77d76d51c81e9f7}{operator==}} (const \mbox{\hyperlink{classRectangle}{Rectangle}} \&R) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classRectangle}{Rectangle}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRectangle_aeb116baadc17f787056a9c39348f2c6a}{operator!=}} (const \mbox{\hyperlink{classRectangle}{Rectangle}} \&R) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classRectangle}{Rectangle}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRectangle_a1dea1ce9f6e32de78832287d2ff92a35}{operator$<$}} (const \mbox{\hyperlink{classRectangle}{Rectangle}} \&R) const
+\begin{DoxyCompactList}\small\item\em Function to order the \mbox{\hyperlink{classRectangle}{Rectangle}} objects. Priority for ordering -\/ {\itshape x\+\_\+left} $>$ {\itshape y\+\_\+bottom} $>$ {\itshape x\+\_\+right} $>$ {\itshape y\+\_\+top}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRectangle_aa4de1b99211383812eb42200888d91e6}\label{classRectangle_aa4de1b99211383812eb42200888d91e6}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classRectangle_aa4de1b99211383812eb42200888d91e6}{x\+\_\+left}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 4 coordinates (x\+\_\+left, x\+\_\+right, y\+\_\+top, y\+\_\+bottom). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRectangle_aca3d912e91a9549a33c2cdfdc8581add}\label{classRectangle_aca3d912e91a9549a33c2cdfdc8581add}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classRectangle_aca3d912e91a9549a33c2cdfdc8581add}{x\+\_\+right}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 4 coordinates (x\+\_\+left, x\+\_\+right, y\+\_\+top, y\+\_\+bottom). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRectangle_a2e9ea7596c2e5ed0a8cb16214669c0c1}\label{classRectangle_a2e9ea7596c2e5ed0a8cb16214669c0c1}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classRectangle_a2e9ea7596c2e5ed0a8cb16214669c0c1}{y\+\_\+top}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 4 coordinates (x\+\_\+left, x\+\_\+right, y\+\_\+top, y\+\_\+bottom). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRectangle_a842578e0d765a47bd3db9cadef7fe691}\label{classRectangle_a842578e0d765a47bd3db9cadef7fe691}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classRectangle_a842578e0d765a47bd3db9cadef7fe691}{y\+\_\+bottom}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 4 coordinates (x\+\_\+left, x\+\_\+right, y\+\_\+top, y\+\_\+bottom). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRectangle_a12399dc819c0587bfe2fb300e57faa56}\label{classRectangle_a12399dc819c0587bfe2fb300e57faa56}} 
+\mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classRectangle_a12399dc819c0587bfe2fb300e57faa56}{x\+\_\+interval}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 2 Intervals (x\+\_\+interval, y\+\_\+interval). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRectangle_ac2e02a76c952cd473371cdd81298e834}\label{classRectangle_ac2e02a76c952cd473371cdd81298e834}} 
+\mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classRectangle_ac2e02a76c952cd473371cdd81298e834}{y\+\_\+interval}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 2 Intervals (x\+\_\+interval, y\+\_\+interval). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRectangle_a5c37d1f5a8674cd438e59e0686be1976}\label{classRectangle_a5c37d1f5a8674cd438e59e0686be1976}} 
+\mbox{\hyperlink{classPoint}{Point}} \mbox{\hyperlink{classRectangle_a5c37d1f5a8674cd438e59e0686be1976}{top\+\_\+left}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 4 points (top\+\_\+left, top\+\_\+right, bottom\+\_\+left, bottom\+\_\+right). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRectangle_aef5dfe96f06005ab2696ae2bf0e71315}\label{classRectangle_aef5dfe96f06005ab2696ae2bf0e71315}} 
+\mbox{\hyperlink{classPoint}{Point}} \mbox{\hyperlink{classRectangle_aef5dfe96f06005ab2696ae2bf0e71315}{top\+\_\+right}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 4 points (top\+\_\+left, top\+\_\+right, bottom\+\_\+left, bottom\+\_\+right). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRectangle_abfef96b8b69b908717277b57235e49e3}\label{classRectangle_abfef96b8b69b908717277b57235e49e3}} 
+\mbox{\hyperlink{classPoint}{Point}} \mbox{\hyperlink{classRectangle_abfef96b8b69b908717277b57235e49e3}{bottom\+\_\+left}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 4 points (top\+\_\+left, top\+\_\+right, bottom\+\_\+left, bottom\+\_\+right). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRectangle_a16df1e2a2d442dc538389921e1656118}\label{classRectangle_a16df1e2a2d442dc538389921e1656118}} 
+\mbox{\hyperlink{classPoint}{Point}} \mbox{\hyperlink{classRectangle_a16df1e2a2d442dc538389921e1656118}{bottom\+\_\+right}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classRectangle}{Rectangle}} using 4 points (top\+\_\+left, top\+\_\+right, bottom\+\_\+left, bottom\+\_\+right). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing physical rectangles. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRectangle_a49c62f0e0933e9959ff142edad98d28d}\label{classRectangle_a49c62f0e0933e9959ff142edad98d28d}} 
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{x\+\_\+left,  }\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{x\+\_\+right,  }\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{y\+\_\+top,  }\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{y\+\_\+bottom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize rectangle using four coordinates. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+\_\+left} & left coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+right} & right coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+\_\+top} & top coordinate \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+\_\+bottom} & bottom coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRectangle_add441f722106d6dd4ac9c95bb1f58a84}\label{classRectangle_add441f722106d6dd4ac9c95bb1f58a84}} 
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{x\+\_\+interval,  }\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{y\+\_\+interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize rectangle using two intervals. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+\_\+interval} & interval along x-\/axis \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+\_\+interval} & interval along y-\/axis \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRectangle_ab4e7f45b3910008196ba861cb3e14236}\label{classRectangle_ab4e7f45b3910008196ba861cb3e14236}} 
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\index{Rectangle@{Rectangle}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPoint}{Point}}}]{top\+\_\+left,  }\item[{\mbox{\hyperlink{classPoint}{Point}}}]{top\+\_\+right,  }\item[{\mbox{\hyperlink{classPoint}{Point}}}]{bottom\+\_\+left,  }\item[{\mbox{\hyperlink{classPoint}{Point}}}]{bottom\+\_\+right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize rectangle using four points. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em top\+\_\+left} & top-\/left point \\
+\hline
+\mbox{\texttt{ in}}  & {\em top\+\_\+right} & top-\/right point \\
+\hline
+\mbox{\texttt{ in}}  & {\em bottom\+\_\+left} & bottom-\/left point \\
+\hline
+\mbox{\texttt{ in}}  & {\em bottom\+\_\+right} & bottom-\/right point \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRectangle_aeb116baadc17f787056a9c39348f2c6a}\label{classRectangle_aeb116baadc17f787056a9c39348f2c6a}} 
+\index{Rectangle@{Rectangle}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Rectangle\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRectangle}{Rectangle}} \&}]{R }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classRectangle}{Rectangle}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if rectangles are different, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRectangle_a1dea1ce9f6e32de78832287d2ff92a35}\label{classRectangle_a1dea1ce9f6e32de78832287d2ff92a35}} 
+\index{Rectangle@{Rectangle}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Rectangle\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRectangle}{Rectangle}} \&}]{R }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to order the \mbox{\hyperlink{classRectangle}{Rectangle}} objects. Priority for ordering -\/ {\itshape x\+\_\+left} $>$ {\itshape y\+\_\+bottom} $>$ {\itshape x\+\_\+right} $>$ {\itshape y\+\_\+top}. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if first rectangle $<$ second rectangle, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRectangle_a69c32ce12cff5e01c77d76d51c81e9f7}\label{classRectangle_a69c32ce12cff5e01c77d76d51c81e9f7}} 
+\index{Rectangle@{Rectangle}!operator==@{operator==}}
+\index{operator==@{operator==}!Rectangle@{Rectangle}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Rectangle\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRectangle}{Rectangle}} \&}]{R }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classRectangle}{Rectangle}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if rectangles are same, else {\itshape false} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rectangle_8hpp}{rectangle.\+hpp}}\end{DoxyCompactItemize}

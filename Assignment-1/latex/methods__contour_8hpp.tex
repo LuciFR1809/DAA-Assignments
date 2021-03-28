@@ -1,0 +1,276 @@
+\hypertarget{methods__contour_8hpp}{}\doxysection{methods\+\_\+contour.\+hpp File Reference}
+\label{methods__contour_8hpp}\index{methods\_contour.hpp@{methods\_contour.hpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}coord.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ctree.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}edge.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}interval.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}line\+\_\+segment.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}point.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rectangle.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stripe.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}methods\+\_\+measure.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{methods__contour_8hpp_a3650b82194ac9a35e26dd0601306be4c}{RECTANGLE\+\_\+\+DAC}} (set$<$ \mbox{\hyperlink{classRectangle}{Rectangle}} $>$ Rect, set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ \&S)
+\begin{DoxyCompactList}\small\item\em Driver function for the main divide and conquer function STRIPES, returns a set of stripes with tree data structure giving pieces of line segments beloning to rectangles in a stripe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{methods__contour_8hpp_a1772e83223876cc125fc153269a669bf}{STRIPES}} (set$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ V, \mbox{\hyperlink{classInterval}{Interval}} x\+\_\+ext, set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \&L, set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \&R, set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ \&P, set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ \&S)
+\begin{DoxyCompactList}\small\item\em Function to perform the divide and conquer algorithm given a set of left and right edges and a x-\/interval, It gives four outputs as a result which are set of intervals for only left edges {\itshape L}, set of intervals for only right edges {\itshape R}, set of coord {\itshape P} and the set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} {\itshape S}. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ \mbox{\hyperlink{methods__contour_8hpp_a8e5255b001fd2bbe662fd79a19924b9e}{copy}} (set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ S, set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ P, \mbox{\hyperlink{classInterval}{Interval}} x\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Function to copy the set of Y-\/intervals of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} of two partitions of divide algorithm into each other, to make the y-\/intervals of both partitions uniform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{methods__contour_8hpp_a911498d4e11341840d4844c58b1e791d}{blacken}} (set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ \&S, set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ J)
+\begin{DoxyCompactList}\small\item\em Function to find left and right edges such that their partners don\textquotesingle{}t exist in the same set. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ \mbox{\hyperlink{methods__contour_8hpp_a7bc5d55ccdf8c5953741b6cefa88c98a}{concat}} (set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ S1, set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ S2, set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ P, \mbox{\hyperlink{classInterval}{Interval}} x\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Function to perform the concatenation operation of two x-\/partitions with same y-\/interval. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{classLineSegment}{Line\+Segment}} $>$ \mbox{\hyperlink{methods__contour_8hpp_a83b043f8ee13bac096bc892e6ab9dfb8}{post\+Process}} (set$<$ \mbox{\hyperlink{classLineSegment}{Line\+Segment}} $>$ L)
+\begin{DoxyCompactList}\small\item\em Function to merge two or more overlapping linesegments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{methods__contour_8hpp_af2f56395f0b5bf674d6d8d86e4845fc3}{traverse\+Ctree}} (\mbox{\hyperlink{classCtree}{Ctree}} $\ast$C, vector$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ \&start, vector$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ \&end)
+\begin{DoxyCompactList}\small\item\em Function used to traverse through \mbox{\hyperlink{classCtree}{Ctree}}. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \mbox{\hyperlink{methods__contour_8hpp_a2dd7d9e93c2d2c5e4cd5b1425e0e5f67}{get\+Intervals}} (\mbox{\hyperlink{classCtree}{Ctree}} $\ast$C)
+\begin{DoxyCompactList}\small\item\em Function used to make intervals using coordinates contained in \mbox{\hyperlink{classCtree}{Ctree}}. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{classLineSegment}{Line\+Segment}} $>$ \mbox{\hyperlink{methods__contour_8hpp_a80a9b6778391de773f46becf5e13d0cd}{contour\+\_\+pieces}} (\mbox{\hyperlink{classEdge}{Edge}} h, set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ S)
+\begin{DoxyCompactList}\small\item\em Corresponding to given edge this function finds the contour pieces. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{classLineSegment}{Line\+Segment}} $>$ \mbox{\hyperlink{methods__contour_8hpp_a08905cd84a69ab727fc85c51802b4fa1}{contour}} (set$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ H, set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ S)
+\begin{DoxyCompactList}\small\item\em Finds the set of Contour Pieces corresponding to all the edges in a set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for including functions required to find the contour for given set of input rectangles
+
+\begin{DoxyAuthor}{Authors}
+Kumar Pranjal 2018A7\+PS0163H 
+
+Ashna Swaika 2018A7\+PS0027H 
+
+Abhishek Bapna 2018A7\+PS0184H 
+
+Ashish Verma 2018A7\+PS0009H 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{methods__contour_8hpp_a911498d4e11341840d4844c58b1e791d}\label{methods__contour_8hpp_a911498d4e11341840d4844c58b1e791d}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!blacken@{blacken}}
+\index{blacken@{blacken}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{blacken()}{blacken()}}
+{\footnotesize\ttfamily void blacken (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ \&}]{S,  }\item[{set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$}]{J }\end{DoxyParamCaption})}
+
+
+
+Function to find left and right edges such that their partners don\textquotesingle{}t exist in the same set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em S} & set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em J} & set of \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+although the return type is void, the function returns {\itshape S} , since it is passed by reference, where edges whose partners are present in same stripe are removed 
+\end{DoxyNote}
+\mbox{\Hypertarget{methods__contour_8hpp_a7bc5d55ccdf8c5953741b6cefa88c98a}\label{methods__contour_8hpp_a7bc5d55ccdf8c5953741b6cefa88c98a}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!concat@{concat}}
+\index{concat@{concat}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{concat()}{concat()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{classStripeContour}{Stripe\+Contour}}$>$ concat (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$}]{S1,  }\item[{set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$}]{S2,  }\item[{set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$}]{P,  }\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{x\+\_\+int }\end{DoxyParamCaption})}
+
+
+
+Function to perform the concatenation operation of two x-\/partitions with same y-\/interval. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S1} & set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em S2} & set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em P} & set of coord \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+int} & \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} after concatenation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{methods__contour_8hpp_a08905cd84a69ab727fc85c51802b4fa1}\label{methods__contour_8hpp_a08905cd84a69ab727fc85c51802b4fa1}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!contour@{contour}}
+\index{contour@{contour}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{contour()}{contour()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{classLineSegment}{Line\+Segment}}$>$ contour (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$}]{H,  }\item[{set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$}]{S }\end{DoxyParamCaption})}
+
+
+
+Finds the set of Contour Pieces corresponding to all the edges in a set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em H} & set of \mbox{\hyperlink{classEdge}{Edge}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em S} & set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of Line segment (contour lines) 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{methods__contour_8hpp_a80a9b6778391de773f46becf5e13d0cd}{contour\+\_\+pieces()}} 
+
+\mbox{\hyperlink{methods__contour_8hpp_a83b043f8ee13bac096bc892e6ab9dfb8}{post\+Process()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{methods__contour_8hpp_a80a9b6778391de773f46becf5e13d0cd}\label{methods__contour_8hpp_a80a9b6778391de773f46becf5e13d0cd}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!contour\_pieces@{contour\_pieces}}
+\index{contour\_pieces@{contour\_pieces}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{contour\_pieces()}{contour\_pieces()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{classLineSegment}{Line\+Segment}}$>$ contour\+\_\+pieces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEdge}{Edge}}}]{h,  }\item[{set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$}]{S }\end{DoxyParamCaption})}
+
+
+
+Corresponding to given edge this function finds the contour pieces. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & set of \mbox{\hyperlink{classEdge}{Edge}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em S} & set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of Line segment (contour lines) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{methods__contour_8hpp_a8e5255b001fd2bbe662fd79a19924b9e}\label{methods__contour_8hpp_a8e5255b001fd2bbe662fd79a19924b9e}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!copy@{copy}}
+\index{copy@{copy}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{classStripeContour}{Stripe\+Contour}}$>$ copy (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$}]{S,  }\item[{set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$}]{P,  }\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{x\+\_\+int }\end{DoxyParamCaption})}
+
+
+
+Function to copy the set of Y-\/intervals of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} of two partitions of divide algorithm into each other, to make the y-\/intervals of both partitions uniform. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S} & set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em P} & set of Coord \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+int} & \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{methods__contour_8hpp_a2dd7d9e93c2d2c5e4cd5b1425e0e5f67}\label{methods__contour_8hpp_a2dd7d9e93c2d2c5e4cd5b1425e0e5f67}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!getIntervals@{getIntervals}}
+\index{getIntervals@{getIntervals}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{getIntervals()}{getIntervals()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{classInterval}{Interval}}$>$ get\+Intervals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCtree}{Ctree}} $\ast$}]{C }\end{DoxyParamCaption})}
+
+
+
+Function used to make intervals using coordinates contained in \mbox{\hyperlink{classCtree}{Ctree}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em C} & pointer to \mbox{\hyperlink{classCtree}{Ctree}} node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of \mbox{\hyperlink{classInterval}{Interval}} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{methods__contour_8hpp_af2f56395f0b5bf674d6d8d86e4845fc3}{traverse\+Ctree}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{methods__contour_8hpp_a83b043f8ee13bac096bc892e6ab9dfb8}\label{methods__contour_8hpp_a83b043f8ee13bac096bc892e6ab9dfb8}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!postProcess@{postProcess}}
+\index{postProcess@{postProcess}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{postProcess()}{postProcess()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{classLineSegment}{Line\+Segment}}$>$ post\+Process (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classLineSegment}{Line\+Segment}} $>$}]{L }\end{DoxyParamCaption})}
+
+
+
+Function to merge two or more overlapping linesegments. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em L} & set of Line segment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of line segment after merge operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{methods__contour_8hpp_a3650b82194ac9a35e26dd0601306be4c}\label{methods__contour_8hpp_a3650b82194ac9a35e26dd0601306be4c}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!RECTANGLE\_DAC@{RECTANGLE\_DAC}}
+\index{RECTANGLE\_DAC@{RECTANGLE\_DAC}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{RECTANGLE\_DAC()}{RECTANGLE\_DAC()}}
+{\footnotesize\ttfamily void RECTANGLE\+\_\+\+DAC (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classRectangle}{Rectangle}} $>$}]{Rect,  }\item[{set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ \&}]{S }\end{DoxyParamCaption})}
+
+
+
+Driver function for the main divide and conquer function STRIPES, returns a set of stripes with tree data structure giving pieces of line segments beloning to rectangles in a stripe. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Rect} & set of \mbox{\hyperlink{classRectangle}{Rectangle}} \\
+\hline
+\mbox{\texttt{ out}}  & {\em S} & set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+since set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} is passed by reference, although the return type is void, the function gives {\itshape S} as a result 
+\end{DoxyNote}
+\mbox{\Hypertarget{methods__contour_8hpp_a1772e83223876cc125fc153269a669bf}\label{methods__contour_8hpp_a1772e83223876cc125fc153269a669bf}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!STRIPES@{STRIPES}}
+\index{STRIPES@{STRIPES}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{STRIPES()}{STRIPES()}}
+{\footnotesize\ttfamily void STRIPES (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$}]{V,  }\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{x\+\_\+ext,  }\item[{set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \&}]{L,  }\item[{set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \&}]{R,  }\item[{set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ \&}]{P,  }\item[{set$<$ \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} $>$ \&}]{S }\end{DoxyParamCaption})}
+
+
+
+Function to perform the divide and conquer algorithm given a set of left and right edges and a x-\/interval, It gives four outputs as a result which are set of intervals for only left edges {\itshape L}, set of intervals for only right edges {\itshape R}, set of coord {\itshape P} and the set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} {\itshape S}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em V} & set of \mbox{\hyperlink{classEdge}{Edge}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+ext} & \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\mbox{\texttt{ out}}  & {\em L} & set of \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\mbox{\texttt{ out}}  & {\em R} & set of \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\mbox{\texttt{ out}}  & {\em P} & set of Coord \\
+\hline
+\mbox{\texttt{ out}}  & {\em S} & set of \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+although the return type is void, the function returns {\itshape L}, {\itshape R}, {\itshape P}, {\itshape S} since they are passed by reference 
+\end{DoxyNote}
+\mbox{\Hypertarget{methods__contour_8hpp_af2f56395f0b5bf674d6d8d86e4845fc3}\label{methods__contour_8hpp_af2f56395f0b5bf674d6d8d86e4845fc3}} 
+\index{methods\_contour.hpp@{methods\_contour.hpp}!traverseCtree@{traverseCtree}}
+\index{traverseCtree@{traverseCtree}!methods\_contour.hpp@{methods\_contour.hpp}}
+\doxysubsubsection{\texorpdfstring{traverseCtree()}{traverseCtree()}}
+{\footnotesize\ttfamily void traverse\+Ctree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCtree}{Ctree}} $\ast$}]{C,  }\item[{vector$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ \&}]{start,  }\item[{vector$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ \&}]{end }\end{DoxyParamCaption})}
+
+
+
+Function used to traverse through \mbox{\hyperlink{classCtree}{Ctree}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em C} & pointer to \mbox{\hyperlink{classCtree}{Ctree}} node \\
+\hline
+\mbox{\texttt{ out}}  & {\em start} & reference to vector of coord \\
+\hline
+\mbox{\texttt{ out}}  & {\em end} & reference to vector of coord \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+{\itshape start} and {\itshape end} are the output as they are passed by reference 
+\end{DoxyNote}

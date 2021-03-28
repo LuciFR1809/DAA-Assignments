@@ -1,0 +1,109 @@
+\hypertarget{classStripeMeasure}{}\doxysection{Stripe\+Measure Class Reference}
+\label{classStripeMeasure}\index{StripeMeasure@{StripeMeasure}}
+
+
+Class representing stripe data structure to find the measure for given set of input rectangles.  
+
+
+
+
+{\ttfamily \#include $<$stripe.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStripeMeasure_acf6515e82efa61fed0dc6b48845b92d7}\label{classStripeMeasure_acf6515e82efa61fed0dc6b48845b92d7}} 
+\mbox{\hyperlink{classStripeMeasure_acf6515e82efa61fed0dc6b48845b92d7}{Stripe\+Measure}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStripeMeasure_ab5c416756a64bf2a9688304c27f96ff2}{Stripe\+Measure}} (\mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classStripeMeasure_ab88cc041b801b1b12dec1e0620ea5982}{x\+\_\+interval}}, \mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classStripeMeasure_afc5ead60da57dbb8843bbe3dec4126bf}{y\+\_\+interval}}, double \mbox{\hyperlink{classStripeMeasure_ad3650731184ddd3f189d8244416e3d54}{x\+\_\+measure}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize stripe for contour function using two Intervals x-\/interval, y-\/interval and a double variable x\+\_\+measure. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStripeMeasure_ad4e88373679217bfbcecab7d2172617c}{operator==}} (const \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \&S) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStripeMeasure_a21c0f172871ec936bd3a78c0d7637f61}{operator!=}} (const \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \&S) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStripeMeasure_a740d5ef31fedad01485847873a0e4a15}{operator$<$}} (const \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \&S) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} objects. Priority for ordering -\/ {\itshape x\+\_\+interval} $>$ {\itshape y\+\_\+interval} $>$ {\itshape x\+\_\+measure}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStripeMeasure_ab88cc041b801b1b12dec1e0620ea5982}\label{classStripeMeasure_ab88cc041b801b1b12dec1e0620ea5982}} 
+\mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classStripeMeasure_ab88cc041b801b1b12dec1e0620ea5982}{x\+\_\+interval}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} using two intervals and a real number (x\+\_\+interval, y\+\_\+interval, x\+\_\+measure) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStripeMeasure_afc5ead60da57dbb8843bbe3dec4126bf}\label{classStripeMeasure_afc5ead60da57dbb8843bbe3dec4126bf}} 
+\mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classStripeMeasure_afc5ead60da57dbb8843bbe3dec4126bf}{y\+\_\+interval}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} using two intervals and a real number (x\+\_\+interval, y\+\_\+interval, x\+\_\+measure) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStripeMeasure_ad3650731184ddd3f189d8244416e3d54}\label{classStripeMeasure_ad3650731184ddd3f189d8244416e3d54}} 
+double \mbox{\hyperlink{classStripeMeasure_ad3650731184ddd3f189d8244416e3d54}{x\+\_\+measure}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} using two intervals and a real number (x\+\_\+interval, y\+\_\+interval, x\+\_\+measure) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing stripe data structure to find the measure for given set of input rectangles. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStripeMeasure_ab5c416756a64bf2a9688304c27f96ff2}\label{classStripeMeasure_ab5c416756a64bf2a9688304c27f96ff2}} 
+\index{StripeMeasure@{StripeMeasure}!StripeMeasure@{StripeMeasure}}
+\index{StripeMeasure@{StripeMeasure}!StripeMeasure@{StripeMeasure}}
+\doxysubsubsection{\texorpdfstring{StripeMeasure()}{StripeMeasure()}}
+{\footnotesize\ttfamily Stripe\+Measure\+::\+Stripe\+Measure (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{x\+\_\+interval,  }\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{y\+\_\+interval,  }\item[{double}]{x\+\_\+measure }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize stripe for contour function using two Intervals x-\/interval, y-\/interval and a double variable x\+\_\+measure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+\_\+interval} & x\+\_\+interval of the stripe \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+\_\+interval} & y\+\_\+interval of the stripe \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+measure} & real value of length of x\+\_\+interval occupied by rectangles in a stripe \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStripeMeasure_a21c0f172871ec936bd3a78c0d7637f61}\label{classStripeMeasure_a21c0f172871ec936bd3a78c0d7637f61}} 
+\index{StripeMeasure@{StripeMeasure}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!StripeMeasure@{StripeMeasure}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Stripe\+Measure\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \&}]{S }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if stripes are different, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStripeMeasure_a740d5ef31fedad01485847873a0e4a15}\label{classStripeMeasure_a740d5ef31fedad01485847873a0e4a15}} 
+\index{StripeMeasure@{StripeMeasure}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!StripeMeasure@{StripeMeasure}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Stripe\+Measure\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \&}]{S }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} objects. Priority for ordering -\/ {\itshape x\+\_\+interval} $>$ {\itshape y\+\_\+interval} $>$ {\itshape x\+\_\+measure}. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if first \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} object $<$ second \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} object, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStripeMeasure_ad4e88373679217bfbcecab7d2172617c}\label{classStripeMeasure_ad4e88373679217bfbcecab7d2172617c}} 
+\index{StripeMeasure@{StripeMeasure}!operator==@{operator==}}
+\index{operator==@{operator==}!StripeMeasure@{StripeMeasure}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Stripe\+Measure\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \&}]{S }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if stripes are same, else {\itshape false} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stripe_8hpp}{stripe.\+hpp}}\end{DoxyCompactItemize}

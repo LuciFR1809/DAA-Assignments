@@ -1,0 +1,213 @@
+\hypertarget{methods__measure_8hpp}{}\doxysection{methods\+\_\+measure.\+hpp File Reference}
+\label{methods__measure_8hpp}\index{methods\_measure.hpp@{methods\_measure.hpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include \char`\"{}coord.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ctree.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}edge.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}interval.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}line\+\_\+segment.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}point.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rectangle.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stripe.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}methods\+\_\+contour.\+hpp\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \mbox{\hyperlink{methods__measure_8hpp_a3fdbc211911c7a44537f5f6481eadeb8}{partition}} (set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ Y)
+\begin{DoxyCompactList}\small\item\em Function to find consecutive y\+\_\+intervals given a set of y coordinates. Used to find the y\+\_\+intervals of Stripes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{methods__measure_8hpp_a990ef866b71a411c0b74bbc42f3a09d4}{RECTANGLE\+\_\+\+DAC}} (set$<$ \mbox{\hyperlink{classRectangle}{Rectangle}} $>$ Rect, set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ \&S)
+\begin{DoxyCompactList}\small\item\em Driver function for the main divide and conquer function STRIPES, returns a set of stripes with x\+\_\+measure giving the length of x-\/interval occupied by set of input rectangles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{methods__measure_8hpp_a5d991211f5ea406d5e61d9f381ea18bc}{STRIPES}} (set$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$ V, \mbox{\hyperlink{classInterval}{Interval}} x\+\_\+ext, set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \&L, set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \&R, set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ \&P, set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ \&S)
+\begin{DoxyCompactList}\small\item\em Function to perform the divide and conquer algorithm given a set of left and right edges and a x-\/interval, It gives four outputs as a result which are set of intervals for only left edges {\itshape L}, set of intervals for only right edges {\itshape R}, set of coord {\itshape P} and the set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} {\itshape S}. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ \mbox{\hyperlink{methods__measure_8hpp_ac7a4940d80434084dd0a255a5b27d765}{copy}} (set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ S, set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ P, \mbox{\hyperlink{classInterval}{Interval}} x\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Function to copy the set of Y-\/intervals of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} of two partitions of divide algorithm into each other, to make the y-\/intervals of both partitions uniform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{methods__measure_8hpp_adae9a60558b4a43fb2badcdf54b7a6d2}{blacken}} (set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ \&S, set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ J)
+\begin{DoxyCompactList}\small\item\em Function to find left and right edges such that their partners don\textquotesingle{}t exist in the same set. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ \mbox{\hyperlink{methods__measure_8hpp_a93ce72dd07a202e75ea69af9677dc529}{concat}} (set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ S1, set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ S2, set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ P, \mbox{\hyperlink{classInterval}{Interval}} x\+\_\+int)
+\begin{DoxyCompactList}\small\item\em Function to perform the concatenation operation of two x-\/partitions with same y-\/interval. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{methods__measure_8hpp_aa66eeecdcb55a231ff40d8a85e0c97fa}{measure}} (set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ S)
+\begin{DoxyCompactList}\small\item\em Function computes the measure of union of set of rectangles using the output \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} from {\itshape RECTANGLE\+\_\+\+DAC} function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for including function required to find the measure for given set of input rectangles
+
+\begin{DoxyAuthor}{Authors}
+Kumar Pranjal 2018A7\+PS0163H 
+
+Ashna Swaika 2018A7\+PS0027H 
+
+Abhishek Bapna 2018A7\+PS0184H 
+
+Ashish Verma 2018A7\+PS0009H 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{methods__measure_8hpp_adae9a60558b4a43fb2badcdf54b7a6d2}\label{methods__measure_8hpp_adae9a60558b4a43fb2badcdf54b7a6d2}} 
+\index{methods\_measure.hpp@{methods\_measure.hpp}!blacken@{blacken}}
+\index{blacken@{blacken}!methods\_measure.hpp@{methods\_measure.hpp}}
+\doxysubsubsection{\texorpdfstring{blacken()}{blacken()}}
+{\footnotesize\ttfamily void blacken (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ \&}]{S,  }\item[{set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$}]{J }\end{DoxyParamCaption})}
+
+
+
+Function to find left and right edges such that their partners don\textquotesingle{}t exist in the same set. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em S} & set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em J} & set of \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classInterval_abc61667b9358f3a10e033498ed5d3ade}{Interval\+::is\+Superset\+Of()}} 
+
+\mbox{\hyperlink{methods__measure_8hpp_a3fdbc211911c7a44537f5f6481eadeb8}{partition()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+although the return type is void, the function returns {\itshape S} , since it is passed by reference, where edges whose partners are present in same stripe are removed 
+\end{DoxyNote}
+\mbox{\Hypertarget{methods__measure_8hpp_a93ce72dd07a202e75ea69af9677dc529}\label{methods__measure_8hpp_a93ce72dd07a202e75ea69af9677dc529}} 
+\index{methods\_measure.hpp@{methods\_measure.hpp}!concat@{concat}}
+\index{concat@{concat}!methods\_measure.hpp@{methods\_measure.hpp}}
+\doxysubsubsection{\texorpdfstring{concat()}{concat()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}}$>$ concat (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$}]{S1,  }\item[{set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$}]{S2,  }\item[{set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$}]{P,  }\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{x\+\_\+int }\end{DoxyParamCaption})}
+
+
+
+Function to perform the concatenation operation of two x-\/partitions with same y-\/interval. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S1} & set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em S2} & set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em P} & set of coord \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+int} & \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape S\+\_\+new} new set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} after concatenation 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{methods__measure_8hpp_a3fdbc211911c7a44537f5f6481eadeb8}{partition()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{methods__measure_8hpp_ac7a4940d80434084dd0a255a5b27d765}\label{methods__measure_8hpp_ac7a4940d80434084dd0a255a5b27d765}} 
+\index{methods\_measure.hpp@{methods\_measure.hpp}!copy@{copy}}
+\index{copy@{copy}!methods\_measure.hpp@{methods\_measure.hpp}}
+\doxysubsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}}$>$ copy (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$}]{S,  }\item[{set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$}]{P,  }\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{x\+\_\+int }\end{DoxyParamCaption})}
+
+
+
+Function to copy the set of Y-\/intervals of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} of two partitions of divide algorithm into each other, to make the y-\/intervals of both partitions uniform. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S} & set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em P} & set of Coord \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+int} & \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classInterval_abc61667b9358f3a10e033498ed5d3ade}{Interval\+::is\+Superset\+Of()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{methods__measure_8hpp_aa66eeecdcb55a231ff40d8a85e0c97fa}\label{methods__measure_8hpp_aa66eeecdcb55a231ff40d8a85e0c97fa}} 
+\index{methods\_measure.hpp@{methods\_measure.hpp}!measure@{measure}}
+\index{measure@{measure}!methods\_measure.hpp@{methods\_measure.hpp}}
+\doxysubsubsection{\texorpdfstring{measure()}{measure()}}
+{\footnotesize\ttfamily double measure (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$}]{S }\end{DoxyParamCaption})}
+
+
+
+Function computes the measure of union of set of rectangles using the output \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} from {\itshape RECTANGLE\+\_\+\+DAC} function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em S} & set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double value giving area of union of set of rectangles ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{methods__measure_8hpp_a3fdbc211911c7a44537f5f6481eadeb8}\label{methods__measure_8hpp_a3fdbc211911c7a44537f5f6481eadeb8}} 
+\index{methods\_measure.hpp@{methods\_measure.hpp}!partition@{partition}}
+\index{partition@{partition}!methods\_measure.hpp@{methods\_measure.hpp}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{classInterval}{Interval}}$>$ partition (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$}]{Y }\end{DoxyParamCaption})}
+
+
+
+Function to find consecutive y\+\_\+intervals given a set of y coordinates. Used to find the y\+\_\+intervals of Stripes. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Y} & parameter set of Coord \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of consecutive y-\/intervals 
+\end{DoxyReturn}
+\mbox{\Hypertarget{methods__measure_8hpp_a990ef866b71a411c0b74bbc42f3a09d4}\label{methods__measure_8hpp_a990ef866b71a411c0b74bbc42f3a09d4}} 
+\index{methods\_measure.hpp@{methods\_measure.hpp}!RECTANGLE\_DAC@{RECTANGLE\_DAC}}
+\index{RECTANGLE\_DAC@{RECTANGLE\_DAC}!methods\_measure.hpp@{methods\_measure.hpp}}
+\doxysubsubsection{\texorpdfstring{RECTANGLE\_DAC()}{RECTANGLE\_DAC()}}
+{\footnotesize\ttfamily void RECTANGLE\+\_\+\+DAC (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classRectangle}{Rectangle}} $>$}]{Rect,  }\item[{set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ \&}]{S }\end{DoxyParamCaption})}
+
+
+
+Driver function for the main divide and conquer function STRIPES, returns a set of stripes with x\+\_\+measure giving the length of x-\/interval occupied by set of input rectangles. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Rect} & set of \mbox{\hyperlink{classRectangle}{Rectangle}} \\
+\hline
+\mbox{\texttt{ out}}  & {\em S} & set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{methods__measure_8hpp_a5d991211f5ea406d5e61d9f381ea18bc}{STRIPES()}} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+since set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} is passed by reference, although the return type is void, the function gives {\itshape S} as a result 
+\end{DoxyNote}
+\mbox{\Hypertarget{methods__measure_8hpp_a5d991211f5ea406d5e61d9f381ea18bc}\label{methods__measure_8hpp_a5d991211f5ea406d5e61d9f381ea18bc}} 
+\index{methods\_measure.hpp@{methods\_measure.hpp}!STRIPES@{STRIPES}}
+\index{STRIPES@{STRIPES}!methods\_measure.hpp@{methods\_measure.hpp}}
+\doxysubsubsection{\texorpdfstring{STRIPES()}{STRIPES()}}
+{\footnotesize\ttfamily void STRIPES (\begin{DoxyParamCaption}\item[{set$<$ \mbox{\hyperlink{classEdge}{Edge}} $>$}]{V,  }\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{x\+\_\+ext,  }\item[{set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \&}]{L,  }\item[{set$<$ \mbox{\hyperlink{classInterval}{Interval}} $>$ \&}]{R,  }\item[{set$<$ \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} $>$ \&}]{P,  }\item[{set$<$ \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} $>$ \&}]{S }\end{DoxyParamCaption})}
+
+
+
+Function to perform the divide and conquer algorithm given a set of left and right edges and a x-\/interval, It gives four outputs as a result which are set of intervals for only left edges {\itshape L}, set of intervals for only right edges {\itshape R}, set of coord {\itshape P} and the set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} {\itshape S}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em V} & set of \mbox{\hyperlink{classEdge}{Edge}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+ext} & \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\mbox{\texttt{ out}}  & {\em L} & set of \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\mbox{\texttt{ out}}  & {\em R} & set of \mbox{\hyperlink{classInterval}{Interval}} \\
+\hline
+\mbox{\texttt{ out}}  & {\em P} & set of Coord \\
+\hline
+\mbox{\texttt{ out}}  & {\em S} & set of \mbox{\hyperlink{classStripeMeasure}{Stripe\+Measure}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+although the return type is void, the function returns {\itshape L}, {\itshape R}, {\itshape P}, {\itshape S} since they are passed by reference 
+\end{DoxyNote}

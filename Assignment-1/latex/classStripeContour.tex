@@ -1,0 +1,109 @@
+\hypertarget{classStripeContour}{}\doxysection{Stripe\+Contour Class Reference}
+\label{classStripeContour}\index{StripeContour@{StripeContour}}
+
+
+Class representing stripe data structure for finding the contour for given set of input rectangles.  
+
+
+
+
+{\ttfamily \#include $<$stripe.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStripeContour_a54a363caf481d16816d5f28d18051477}\label{classStripeContour_a54a363caf481d16816d5f28d18051477}} 
+\mbox{\hyperlink{classStripeContour_a54a363caf481d16816d5f28d18051477}{Stripe\+Contour}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStripeContour_a3131cba3798ade7d9270b8683b68b796}{Stripe\+Contour}} (\mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classStripeContour_a6903e58611fb60633ba635f2d7f414a3}{x\+\_\+interval}}, \mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classStripeContour_af0415a33f57dd9d8dc58c0b552c21cba}{y\+\_\+interval}}, \mbox{\hyperlink{classCtree}{Ctree}} $\ast$\mbox{\hyperlink{classStripeContour_a962d4e4fbfaf7e2292e94226191ab12b}{tree}})
+\begin{DoxyCompactList}\small\item\em Constructor to initialize stripe for contour function using x-\/interval, y-\/interval and pointer to ctree data structure. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStripeContour_a42ad65547867892cfa278c77063a3d50}{operator==}} (const \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \&S) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStripeContour_a5ae38ce2b9ec36e9f3cf9236cf6bf0d4}{operator!=}} (const \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \&S) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStripeContour_ab8e57c19d1dd122b989a28fb07aecd4a}{operator$<$}} (const \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \&S) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} objects. Priority for ordering -\/ {\itshape x\+\_\+interval} $>$ {\itshape y\+\_\+interval} $>$ {\itshape tree}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classStripeContour_a6903e58611fb60633ba635f2d7f414a3}\label{classStripeContour_a6903e58611fb60633ba635f2d7f414a3}} 
+\mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classStripeContour_a6903e58611fb60633ba635f2d7f414a3}{x\+\_\+interval}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} using two \mbox{\hyperlink{classInterval}{Interval}} objects and one pointer to ctree data (x\+\_\+interval, y\+\_\+interval, tree) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStripeContour_af0415a33f57dd9d8dc58c0b552c21cba}\label{classStripeContour_af0415a33f57dd9d8dc58c0b552c21cba}} 
+\mbox{\hyperlink{classInterval}{Interval}} \mbox{\hyperlink{classStripeContour_af0415a33f57dd9d8dc58c0b552c21cba}{y\+\_\+interval}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} using two \mbox{\hyperlink{classInterval}{Interval}} objects and one pointer to ctree data (x\+\_\+interval, y\+\_\+interval, tree) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classStripeContour_a962d4e4fbfaf7e2292e94226191ab12b}\label{classStripeContour_a962d4e4fbfaf7e2292e94226191ab12b}} 
+\mbox{\hyperlink{classCtree}{Ctree}} $\ast$ \mbox{\hyperlink{classStripeContour_a962d4e4fbfaf7e2292e94226191ab12b}{tree}}
+\begin{DoxyCompactList}\small\item\em Defines \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} using two \mbox{\hyperlink{classInterval}{Interval}} objects and one pointer to ctree data (x\+\_\+interval, y\+\_\+interval, tree) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing stripe data structure for finding the contour for given set of input rectangles. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStripeContour_a3131cba3798ade7d9270b8683b68b796}\label{classStripeContour_a3131cba3798ade7d9270b8683b68b796}} 
+\index{StripeContour@{StripeContour}!StripeContour@{StripeContour}}
+\index{StripeContour@{StripeContour}!StripeContour@{StripeContour}}
+\doxysubsubsection{\texorpdfstring{StripeContour()}{StripeContour()}}
+{\footnotesize\ttfamily Stripe\+Contour\+::\+Stripe\+Contour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{x\+\_\+interval,  }\item[{\mbox{\hyperlink{classInterval}{Interval}}}]{y\+\_\+interval,  }\item[{\mbox{\hyperlink{classCtree}{Ctree}} $\ast$}]{tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize stripe for contour function using x-\/interval, y-\/interval and pointer to ctree data structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+\_\+interval} & x\+\_\+interval of the stripe \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+\_\+interval} & y\+\_\+interval of the stripe \\
+\hline
+\mbox{\texttt{ in}}  & {\em tree} & pointer to c\+\_\+tree data structure \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStripeContour_a5ae38ce2b9ec36e9f3cf9236cf6bf0d4}\label{classStripeContour_a5ae38ce2b9ec36e9f3cf9236cf6bf0d4}} 
+\index{StripeContour@{StripeContour}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!StripeContour@{StripeContour}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Stripe\+Contour\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \&}]{S }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if stripes are different, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStripeContour_ab8e57c19d1dd122b989a28fb07aecd4a}\label{classStripeContour_ab8e57c19d1dd122b989a28fb07aecd4a}} 
+\index{StripeContour@{StripeContour}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!StripeContour@{StripeContour}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Stripe\+Contour\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \&}]{S }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} objects. Priority for ordering -\/ {\itshape x\+\_\+interval} $>$ {\itshape y\+\_\+interval} $>$ {\itshape tree}. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if first \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} object $<$ second \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} object, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStripeContour_a42ad65547867892cfa278c77063a3d50}\label{classStripeContour_a42ad65547867892cfa278c77063a3d50}} 
+\index{StripeContour@{StripeContour}!operator==@{operator==}}
+\index{operator==@{operator==}!StripeContour@{StripeContour}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Stripe\+Contour\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} \&}]{S }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if stripes are same, else {\itshape false} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stripe_8hpp}{stripe.\+hpp}}\end{DoxyCompactItemize}

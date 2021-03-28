@@ -1,0 +1,104 @@
+\hypertarget{classPoint}{}\doxysection{Point Class Reference}
+\label{classPoint}\index{Point@{Point}}
+
+
+\mbox{\hyperlink{classPoint}{Point}} object is used for creating \mbox{\hyperlink{classRectangle}{Rectangle}}.  
+
+
+
+
+{\ttfamily \#include $<$point.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPoint_ad92f2337b839a94ce97dcdb439b4325a}\label{classPoint_ad92f2337b839a94ce97dcdb439b4325a}} 
+\mbox{\hyperlink{classPoint_ad92f2337b839a94ce97dcdb439b4325a}{Point}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPoint_a1a05d89446c194e85b659505b198a8f3}{Point}} (\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classPoint_af82eb022862441555135e5a53145c150}{x}}, \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classPoint_aae4ead6861dba21fd2af2909e9d7d6cf}{y}})
+\begin{DoxyCompactList}\small\item\em Constructor accepting {\itshape x} and {\itshape y} coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPoint_ad3523685955c13477d484c3aaa733b69}{operator==}} (const \mbox{\hyperlink{classPoint}{Point}} \&P) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classPoint}{Point}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPoint_a1d668612573c9e48c26044c68dd32e6a}{operator!=}} (const \mbox{\hyperlink{classPoint}{Point}} \&P) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{classPoint}{Point}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPoint_a6e509a50926c339b141983878c5cc9d3}{operator$<$}} (const \mbox{\hyperlink{classPoint}{Point}} \&P) const
+\begin{DoxyCompactList}\small\item\em Function to order the \mbox{\hyperlink{classPoint}{Point}} objects. Priority for ordering -\/ {\itshape x} $>$ {\itshape y}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPoint_af82eb022862441555135e5a53145c150}\label{classPoint_af82eb022862441555135e5a53145c150}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classPoint_af82eb022862441555135e5a53145c150}{x}}
+\begin{DoxyCompactList}\small\item\em x coordiante of point \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPoint_aae4ead6861dba21fd2af2909e9d7d6cf}\label{classPoint_aae4ead6861dba21fd2af2909e9d7d6cf}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classPoint_aae4ead6861dba21fd2af2909e9d7d6cf}{y}}
+\begin{DoxyCompactList}\small\item\em y coordiante of point \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classPoint}{Point}} object is used for creating \mbox{\hyperlink{classRectangle}{Rectangle}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPoint_a1a05d89446c194e85b659505b198a8f3}\label{classPoint_a1a05d89446c194e85b659505b198a8f3}} 
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}}
+{\footnotesize\ttfamily Point\+::\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{x,  }\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor accepting {\itshape x} and {\itshape y} coordinates. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & x coordinate of point \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & y coordinate of point \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPoint_a1d668612573c9e48c26044c68dd32e6a}\label{classPoint_a1d668612573c9e48c26044c68dd32e6a}} 
+\index{Point@{Point}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Point\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint}{Point}} \&}]{P }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classPoint}{Point}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if points are different, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPoint_a6e509a50926c339b141983878c5cc9d3}\label{classPoint_a6e509a50926c339b141983878c5cc9d3}} 
+\index{Point@{Point}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Point\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint}{Point}} \&}]{P }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to order the \mbox{\hyperlink{classPoint}{Point}} objects. Priority for ordering -\/ {\itshape x} $>$ {\itshape y}. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if first point $<$ second point, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPoint_ad3523685955c13477d484c3aaa733b69}\label{classPoint_ad3523685955c13477d484c3aaa733b69}} 
+\index{Point@{Point}!operator==@{operator==}}
+\index{operator==@{operator==}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Point\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPoint}{Point}} \&}]{P }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{classPoint}{Point}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if points are same, else {\itshape false} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{point_8hpp}{point.\+hpp}}\end{DoxyCompactItemize}

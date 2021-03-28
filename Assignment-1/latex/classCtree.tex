@@ -1,0 +1,197 @@
+\hypertarget{classCtree}{}\doxysection{Ctree Class Reference}
+\label{classCtree}\index{Ctree@{Ctree}}
+
+
+\mbox{\hyperlink{classCtree}{Ctree}} object is used in \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}}.  
+
+
+
+
+{\ttfamily \#include $<$ctree.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCtree_aa897cd98d7169778a464fe364ede23ab}\label{classCtree_aa897cd98d7169778a464fe364ede23ab}} 
+\mbox{\hyperlink{classCtree_aa897cd98d7169778a464fe364ede23ab}{Ctree}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCtree_a1716799b743e3179d85b7f513840d34e}{Ctree}} (\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classCtree_a15d9f7ccc2d89027d6d1dbd2cde440e1}{x}}, \mbox{\hyperlink{ctree_8hpp_a4d46fc1b8c6ef38a260be15e3655d4eb}{lru}} \mbox{\hyperlink{classCtree_ab11ba80179848f6d40a12974c8d9cdd8}{side}})
+\begin{DoxyCompactList}\small\item\em Constructor accepting coord and lru. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCtree_a46eb68dacdcb55614e488ebe8526b3d5}{Ctree}} (\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classCtree_a15d9f7ccc2d89027d6d1dbd2cde440e1}{x}}, \mbox{\hyperlink{ctree_8hpp_a4d46fc1b8c6ef38a260be15e3655d4eb}{lru}} \mbox{\hyperlink{classCtree_ab11ba80179848f6d40a12974c8d9cdd8}{side}}, \mbox{\hyperlink{classCtree}{Ctree}} $\ast$\mbox{\hyperlink{classCtree_aed6f2dfc7823f35f3b1d94d89d36e0ad}{lson}}, \mbox{\hyperlink{classCtree}{Ctree}} $\ast$\mbox{\hyperlink{classCtree_ab6fc538d70ad0e8c1f965e9cd2e54838}{rson}})
+\begin{DoxyCompactList}\small\item\em Constructor accepting four parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCtree_a4ded5c9ce96740311ba6625eca1b7b8c}{ptreq}} (const \mbox{\hyperlink{classCtree}{Ctree}} $\ast$first, const \mbox{\hyperlink{classCtree}{Ctree}} $\ast$second) const
+\begin{DoxyCompactList}\small\item\em Function to compare two \mbox{\hyperlink{classCtree}{Ctree}} pointers. Checks if the pointers point to same \mbox{\hyperlink{classCtree}{Ctree}}. If not, it compares the contents of the two Ctrees. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCtree_af5a6d075444d43da497c8793c0f5f497}{ptrneq}} (const \mbox{\hyperlink{classCtree}{Ctree}} $\ast$first, const \mbox{\hyperlink{classCtree}{Ctree}} $\ast$second) const
+\begin{DoxyCompactList}\small\item\em Negation of \mbox{\hyperlink{classCtree_a4ded5c9ce96740311ba6625eca1b7b8c}{Ctree\+::ptreq}} function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCtree_aac11a8c20c129c0af7d8c32f13f879be}{operator==}} (const \mbox{\hyperlink{classCtree}{Ctree}} \&C) const
+\begin{DoxyCompactList}\small\item\em Function to compare two \mbox{\hyperlink{classCtree}{Ctree}} objects, including their children. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCtree_a5fcb161a761d0baaa97af70f8fdbee86}{operator!=}} (const \mbox{\hyperlink{classCtree}{Ctree}} \&C) const
+\begin{DoxyCompactList}\small\item\em Function to compare two \mbox{\hyperlink{classCtree}{Ctree}} objects, including their children. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCtree_ad02541bc320075d8f675fc2c2ad22f26}{operator$<$}} (const \mbox{\hyperlink{classCtree}{Ctree}} \&C) const
+\begin{DoxyCompactList}\small\item\em Function to order the \mbox{\hyperlink{classCtree}{Ctree}} objects. Priority for ordering -\/ {\itshape x} $>$ {\itshape side} $>$ {\itshape lson} $>$ {\itshape rson}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCtree_a15d9f7ccc2d89027d6d1dbd2cde440e1}\label{classCtree_a15d9f7ccc2d89027d6d1dbd2cde440e1}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{classCtree_a15d9f7ccc2d89027d6d1dbd2cde440e1}{x}}
+\begin{DoxyCompactList}\small\item\em coord stored in \mbox{\hyperlink{classCtree}{Ctree}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCtree_ab11ba80179848f6d40a12974c8d9cdd8}\label{classCtree_ab11ba80179848f6d40a12974c8d9cdd8}} 
+\mbox{\hyperlink{ctree_8hpp_a4d46fc1b8c6ef38a260be15e3655d4eb}{lru}} \mbox{\hyperlink{classCtree_ab11ba80179848f6d40a12974c8d9cdd8}{side}}
+\begin{DoxyCompactList}\small\item\em Denotes whether coord x is left(starting) or right(ending) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCtree_aed6f2dfc7823f35f3b1d94d89d36e0ad}\label{classCtree_aed6f2dfc7823f35f3b1d94d89d36e0ad}} 
+\mbox{\hyperlink{classCtree}{Ctree}} $\ast$ \mbox{\hyperlink{classCtree_aed6f2dfc7823f35f3b1d94d89d36e0ad}{lson}}
+\begin{DoxyCompactList}\small\item\em Pointer to left child. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCtree_ab6fc538d70ad0e8c1f965e9cd2e54838}\label{classCtree_ab6fc538d70ad0e8c1f965e9cd2e54838}} 
+\mbox{\hyperlink{classCtree}{Ctree}} $\ast$ \mbox{\hyperlink{classCtree_ab6fc538d70ad0e8c1f965e9cd2e54838}{rson}}
+\begin{DoxyCompactList}\small\item\em Pointer to right child. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCtree}{Ctree}} object is used in \mbox{\hyperlink{classStripeContour}{Stripe\+Contour}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCtree_a1716799b743e3179d85b7f513840d34e}\label{classCtree_a1716799b743e3179d85b7f513840d34e}} 
+\index{Ctree@{Ctree}!Ctree@{Ctree}}
+\index{Ctree@{Ctree}!Ctree@{Ctree}}
+\doxysubsubsection{\texorpdfstring{Ctree()}{Ctree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ctree\+::\+Ctree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{x,  }\item[{\mbox{\hyperlink{ctree_8hpp_a4d46fc1b8c6ef38a260be15e3655d4eb}{lru}}}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor accepting coord and lru. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & coord x \\
+\hline
+\mbox{\texttt{ in}}  & {\em side} & lru side \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCtree_a46eb68dacdcb55614e488ebe8526b3d5}\label{classCtree_a46eb68dacdcb55614e488ebe8526b3d5}} 
+\index{Ctree@{Ctree}!Ctree@{Ctree}}
+\index{Ctree@{Ctree}!Ctree@{Ctree}}
+\doxysubsubsection{\texorpdfstring{Ctree()}{Ctree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ctree\+::\+Ctree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{x,  }\item[{\mbox{\hyperlink{ctree_8hpp_a4d46fc1b8c6ef38a260be15e3655d4eb}{lru}}}]{side,  }\item[{\mbox{\hyperlink{classCtree}{Ctree}} $\ast$}]{lson,  }\item[{\mbox{\hyperlink{classCtree}{Ctree}} $\ast$}]{rson }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor accepting four parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & coord x \\
+\hline
+\mbox{\texttt{ in}}  & {\em side} & lru side \\
+\hline
+\mbox{\texttt{ in}}  & {\em lson} & pointer to left child \\
+\hline
+\mbox{\texttt{ in}}  & {\em rson} & pointer to right child \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCtree_a5fcb161a761d0baaa97af70f8fdbee86}\label{classCtree_a5fcb161a761d0baaa97af70f8fdbee86}} 
+\index{Ctree@{Ctree}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Ctree@{Ctree}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Ctree\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCtree}{Ctree}} \&}]{C }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to compare two \mbox{\hyperlink{classCtree}{Ctree}} objects, including their children. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if Ctrees are different, else {\itshape false} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classCtree_af5a6d075444d43da497c8793c0f5f497}{Ctree\+::ptrneq()}} 
+
+\mbox{\hyperlink{classCtree_aac11a8c20c129c0af7d8c32f13f879be}{Ctree\+::operator==()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classCtree_ad02541bc320075d8f675fc2c2ad22f26}\label{classCtree_ad02541bc320075d8f675fc2c2ad22f26}} 
+\index{Ctree@{Ctree}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Ctree@{Ctree}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Ctree\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCtree}{Ctree}} \&}]{C }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to order the \mbox{\hyperlink{classCtree}{Ctree}} objects. Priority for ordering -\/ {\itshape x} $>$ {\itshape side} $>$ {\itshape lson} $>$ {\itshape rson}. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if first ctree $<$ second ctree, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCtree_aac11a8c20c129c0af7d8c32f13f879be}\label{classCtree_aac11a8c20c129c0af7d8c32f13f879be}} 
+\index{Ctree@{Ctree}!operator==@{operator==}}
+\index{operator==@{operator==}!Ctree@{Ctree}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Ctree\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCtree}{Ctree}} \&}]{C }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to compare two \mbox{\hyperlink{classCtree}{Ctree}} objects, including their children. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if Ctrees are same, else {\itshape false} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classCtree_a4ded5c9ce96740311ba6625eca1b7b8c}{Ctree\+::ptreq()}} 
+
+\mbox{\hyperlink{classCtree_a5fcb161a761d0baaa97af70f8fdbee86}{Ctree\+::operator!=()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classCtree_a4ded5c9ce96740311ba6625eca1b7b8c}\label{classCtree_a4ded5c9ce96740311ba6625eca1b7b8c}} 
+\index{Ctree@{Ctree}!ptreq@{ptreq}}
+\index{ptreq@{ptreq}!Ctree@{Ctree}}
+\doxysubsubsection{\texorpdfstring{ptreq()}{ptreq()}}
+{\footnotesize\ttfamily bool Ctree\+::ptreq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCtree}{Ctree}} $\ast$}]{first,  }\item[{const \mbox{\hyperlink{classCtree}{Ctree}} $\ast$}]{second }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to compare two \mbox{\hyperlink{classCtree}{Ctree}} pointers. Checks if the pointers point to same \mbox{\hyperlink{classCtree}{Ctree}}. If not, it compares the contents of the two Ctrees. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em first} & pointer to first \mbox{\hyperlink{classCtree}{Ctree}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em second} & pointer to second \mbox{\hyperlink{classCtree}{Ctree}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if any condition is satisfied, else {\itshape false} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classCtree_af5a6d075444d43da497c8793c0f5f497}{Ctree\+::ptrneq()}} 
+
+\mbox{\hyperlink{classCtree_aac11a8c20c129c0af7d8c32f13f879be}{Ctree\+::operator==()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classCtree_af5a6d075444d43da497c8793c0f5f497}\label{classCtree_af5a6d075444d43da497c8793c0f5f497}} 
+\index{Ctree@{Ctree}!ptrneq@{ptrneq}}
+\index{ptrneq@{ptrneq}!Ctree@{Ctree}}
+\doxysubsubsection{\texorpdfstring{ptrneq()}{ptrneq()}}
+{\footnotesize\ttfamily bool Ctree\+::ptrneq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCtree}{Ctree}} $\ast$}]{first,  }\item[{const \mbox{\hyperlink{classCtree}{Ctree}} $\ast$}]{second }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Negation of \mbox{\hyperlink{classCtree_a4ded5c9ce96740311ba6625eca1b7b8c}{Ctree\+::ptreq}} function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em first} & pointer to first \mbox{\hyperlink{classCtree}{Ctree}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em second} & pointer to second \mbox{\hyperlink{classCtree}{Ctree}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if Ctrees are different, else {\itshape false} 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classCtree_a4ded5c9ce96740311ba6625eca1b7b8c}{Ctree\+::ptreq()}} 
+
+\mbox{\hyperlink{classCtree_a5fcb161a761d0baaa97af70f8fdbee86}{Ctree\+::operator!=()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ctree_8hpp}{ctree.\+hpp}}\end{DoxyCompactItemize}
