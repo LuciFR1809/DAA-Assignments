@@ -1,6 +1,6 @@
 # DAA Assignments
 ## Assignment-1
-_ Implementation of [Paper](https://link.springer.com/article/10.1007/BF00264251) by Ralf Hartmut Guting _
+__Implementation of [Paper](https://link.springer.com/article/10.1007/BF00264251) by Ralf Hartmut Guting__
 - Implementation of contour and measure
 - Visualization, Plot of rectangles
 - 
