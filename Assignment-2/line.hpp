@@ -13,6 +13,7 @@
 #define LINE_HPP
 
 #include <vector>
+#include <math.h>
 #include "point.hpp"
 
 using namespace std;
@@ -57,8 +58,11 @@ class Line{
                 x_sq_sum += (i.x*i.x);
                 prod_sum += (i.y*i.x);
             }
-
-            this->a = (n*prod_sum - x_sum*y_sum)/(n*x_sq_sum - x_sum*x_sum);
+            if(n*x_sq_sum - x_sum*x_sum == 0)
+                this->a = INFINITY;
+            else
+                this->a = (n*prod_sum - x_sum*y_sum)/(n*x_sq_sum - x_sum*x_sum);
+                
             this->b = (y_sum - a*x_sum)/n;
         }
 

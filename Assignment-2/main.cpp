@@ -11,7 +11,8 @@ int main(){
     string filename;
     cout << "Please enter the filename " ;
     cin >> filename;
-    ifstream filep ("testcases/" + filename);
+    filename = "testcases/" +filename;
+    ifstream filep (filename);
     vector<Point> input;
 
     double cost;
@@ -29,26 +30,34 @@ int main(){
 
     sort(input.begin(), input.end(), [](const Point & a, const Point & b) -> bool
     { 
-        return a.x < b.x; 
+        return a.x < b.x || (a.x == b.x && a.y < b.y); 
     });
 
-    int n = input.size();
+    input.insert(input.begin(),Point(-INFINITY,-INFINITY));
+    int n = input.size()-1;
 
-    vector<double> M(n,0);
+    cout << n << endl;
+
+    vector<double> M(n+1,0);
     vector<vector<double>> Err;
     Segmented_Least_Square(input, cost, M, Err);
 
+
     vector<vector<Point>> result;
-    Find_Segment(n-1, input, M, cost, Err, result);
+    Find_Segment(n, input, M, cost, Err, result);
+
 
     int c = 1;
+    reverse(result.begin(), result.end());
+    ofstream ofp(filename+"_out.txt");
     for(auto i : result){
         Line L = Line(i);
-        cout << "Partition " << c++  << " : Line [ y = " << L.a << "*x + " << L.b << " ]"<< endl;
+        ofp << "Partition " << c++  << " : Line [ y = " << L.a << "*x + " << L.b << " ]"<< endl;
         for(auto j : i){
-            cout << j.x << " " << j.y << endl;
+            ofp << j.x << " " << j.y << endl;
         }
     }
+    ofp.close();
 }
 
 // doubt : what to output and how to show final result, how correct is implementation
