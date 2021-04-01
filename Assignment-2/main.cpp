@@ -1,24 +1,19 @@
 #include<iostream>
 #include<fstream>
 #include <bits/stdc++.h>
-
+#include<string>
 #include "functions.hpp"
 
 using namespace std;
 
-int main(){
-
+int main(int argc, char *argv[]){
+string f = argv[1];
     string filename;
-    cout << "Please enter the filename " ;
-    cin >> filename;
-    filename = "testcases/" +filename;
+    filename = "testcases/" +f;
     ifstream filep (filename);
     vector<Point> input;
-
-    double cost;
-    cout << "Please enter the cost " ;
-    cin >> cost;
-
+    double cost=strtod(argv[2],NULL);
+//cout<<f<<" "<<cost;
 //error : taking last line twice
     while(!filep.eof())
     {
@@ -36,7 +31,7 @@ int main(){
     input.insert(input.begin(),Point(-INFINITY,-INFINITY));
     int n = input.size()-1;
 
-    cout << n << endl;
+    //cout << n << endl;
 
     vector<double> M(n+1,0);
     vector<vector<double>> Err;
@@ -50,14 +45,19 @@ int main(){
     int c = 1;
     reverse(result.begin(), result.end());
     ofstream ofp(filename+"_out.txt");
+    ofstream ofp2(filename+"_line.txt");
+    double tot_error=0;
     for(auto i : result){
         Line L = Line(i);
         ofp << "Partition " << c++  << " : Line [ y = " << L.a << "*x + " << L.b << " ]"<< endl;
         for(auto j : i){
-            ofp << j.x << " " << j.y << endl;
+            tot_error+=L.err(j);
+            ofp << j.x << " " << j.y<<endl;
         }
+        ofp2<<tot_error<<" "<<L.a<<" "<<L.b<<" "<<i.begin()->x<<" "<<(i.end()-1)->x<<endl;
     }
     ofp.close();
+    ofp2.close();
 }
 
 // doubt : what to output and how to show final result, how correct is implementation
