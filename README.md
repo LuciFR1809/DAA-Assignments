@@ -8,5 +8,5 @@ Course mandated Project for Design & Analysis of Algorithms (CS F364) at BITS Hy
 - [Abhishek Bapna](https://github.com/LuciFR1809)
 - [Kumar Pranjal](https://github.com/kpranjal2047)
 - [Ashna Swaika](https://github.com/ash9swaika)
-- Ashish Verma
+- [Ashish Verma](https://github.com/brickster241)
 
