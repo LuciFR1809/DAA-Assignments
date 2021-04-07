@@ -1,52 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>DAA Assignment 1</title>
-  <meta name="description" content="DAA-1">
-  <meta name="author" content="AAAP">
-  <link rel="stylesheet" href="main.css?v=1.0">
-</head>
-<body>
-    <div id="navbar" class="navbar">
-        <!--<a class="active" href="#home">Home</a>-->
-        <a href="test cases.html">Test Cases</a>
-        <a href="algorithm.html">Algorithm</a>
-        <a href="documentation.html">Documentation</a>
-        <a class="active"  href="timing.html">Timing Analysis</a>
-        <a href="remarks.html">Remarks</a>
-        <a href="references.html">References</a>
-        <a href="main.html" style="float:inline-end;">Back</a>
-    </div>    
-    <h1 ><u>Timing Analysis</u></h1>
-    <img src="./time.png" width=80%/> 
-    <p class="timing">DIVIDE : <b>O</b><b>(</b>1<b>)</b><br>
-      &emsp;&emsp;<b>O</b><b>(</b>1<b>)</b> :STRIPES divide<br>
-  CONQUER : 2*T<b>(</b>N/2<b>)</b><br>
-  &emsp;&emsp;<b>O</b><b>(</b>1<b>)</b> : STRIPES Base Case<br>
-  &emsp;&emsp;2*T<b>(</b>N/2<b>)</b> : STRIPES Recursive step<br>
-  MERGE : <b>O</b><b>(</b>N<sup>2</sup><b>)</b><br>
-  &emsp;&emsp;<b>O</b><b>(</b>N<b>)</b> : set operations like intersection, union, difference<br>
-  &emsp;&emsp;<b>O</b><b>(</b>N<sup>2</sup><b>)</b> : copy, blacken, concat functions are main functions useful for merge <br>
-  EXTRA Functions : <br>
-  &emsp;&emsp;<b>O</b><b>(</b>1<b>)</b> : RECTANGLE_DAC<br>
-  &emsp;&emsp;<b>O</b><b>(</b>N<b>)</b> : Measure - calculates measure given all the stripes; Contour, contour_pieces - calculate contour pieces given stripes<br>
-  &emsp;&emsp;<b>O</b><b>(</b>P<sup>2</sup><b>)</b> : PostProcess<br>
-  
-  where N = Total Number of left and right edges<br>
-  &emsp;&emsp;P = Total Number of Contour Pieces<br>
-  
-  Final Time Complexity for STRIPES Functions<br>
-  
-  T<b>(</b>N<b>)</b> = <b>O</b><b>(</b>1<b>)</b> + 2*T<b>(</b>N/2<b>)</b> + <b>O</b><b>(</b>N<sup>2</sup><b>)</b> <br>
-  
-  this can be solved to get T<b>(</b>N<b>)</b> = <b>O</b><b>(</b>N<sup>2</sup><b>)</b><br>
-  
-  therefore the final complexity of the whole algorithm is <b>O</b><b>(</b>1<b>)</b>*<b>O</b><b>(</b>N<sup>2</sup><b>)</b> + <b>O</b><b>(</b>N<b>)</b> + <b>O</b><b>(</b>P<sup>2</sup><b>)</b> <br>
-  which is equal to <i style="color:red"><b>O</b><b>(</b>N<sup>2</sup>+P<sup>2</sup><b>)</b></i></p>
-      <script src="main.js">
-          
-      </script>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <title>DAA Assignment 1</title>
+        <meta name="description" content="DAA-1" />
+        <meta name="author" content="AAAP" />
+        <link rel="stylesheet" href="main.css?v=1.0" />
+    </head>
+    <body>
+        <div id="navbar" class="navbar">
+            <!--<a class="active" href="#home">Home</a>-->
+            <a href="test cases.html">Test Cases</a>
+            <a href="algorithm.html">Algorithm</a>
+            <a href="documentation.html">Documentation</a>
+            <a class="active" href="timing.html">Timing Analysis</a>
+            <a href="remarks.html">Remarks</a>
+            <a href="references.html">References</a>
+            <a href="main.html" style="float: inline-end">Back</a>
+        </div>
+        <h1><u>Timing Analysis</u></h1>
+        <img src="./time.png" width="80%" />
+        <p class="timing">
+            DIVIDE : <b>O</b><b>(</b>1<b>)</b><br />
+            &emsp;&emsp;<b>O</b><b>(</b>1<b>)</b> :STRIPES divide<br />
+            CONQUER : 2*T<b>(</b>N/2<b>)</b><br />
+            &emsp;&emsp;<b>O</b><b>(</b>1<b>)</b> : STRIPES Base Case<br />
+            &emsp;&emsp;2*T<b>(</b>N/2<b>)</b> : STRIPES Recursive step<br />
+            MERGE : <b>O</b><b>(</b>N<sup>2</sup><b>)</b><br />
+            &emsp;&emsp;<b>O</b><b>(</b>N<b>)</b> : set operations like
+            intersection, union, difference<br />
+            &emsp;&emsp;<b>O</b><b>(</b>N<sup>2</sup><b>)</b> : copy, blacken,
+            concat functions are main functions useful for merge <br />
+            EXTRA Functions : <br />
+            &emsp;&emsp;<b>O</b><b>(</b>1<b>)</b> : RECTANGLE_DAC<br />
+            &emsp;&emsp;<b>O</b><b>(</b>N<b>)</b> : Measure - calculates measure
+            given all the stripes; Contour, contour_pieces - calculate contour
+            pieces given stripes<br />
+            &emsp;&emsp;<b>O</b><b>(</b>P<sup>2</sup><b>)</b> : PostProcess<br />
+
+            where N = Total Number of left and right edges<br />
+            &emsp;&emsp;P = Total Number of Contour Pieces<br />
+
+            Final Time Complexity for STRIPES Functions<br />
+
+            T<b>(</b>N<b>)</b> = <b>O</b><b>(</b>1<b>)</b> + 2*T<b>(</b>N/2<b
+                >)</b
+            >
+            + <b>O</b><b>(</b>N<sup>2</sup><b>)</b> <br />
+
+            this can be solved to get T<b>(</b>N<b>)</b> = <b>O</b><b>(</b>N<sup
+                >2</sup
+            ><b>)</b><br />
+
+            therefore the final complexity of the whole algorithm is <b>O</b
+            ><b>(</b>1<b>)</b>*<b>O</b><b>(</b>N<sup>2</sup><b>)</b> + <b>O</b
+            ><b>(</b>N<b>)</b> + <b>O</b><b>(</b>P<sup>2</sup><b>)</b> <br />
+            which is equal to
+            <i style="color: red"
+                ><b>O</b><b>(</b>N<sup>2</sup>+P<sup>2</sup><b>)</b></i
+            >
+        </p>
+        <script src="main.js"></script>
+    </body>
 </html>
 <!--onclick="transitionToPage<b>(</b>'menu.html'<b>)</b>"-->

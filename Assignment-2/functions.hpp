@@ -11,7 +11,7 @@
 #ifndef FUNCTIONS_CPP
 #define FUNCTIONS_CPP
 
-#include<vector>
+#include <vector>
 #include "line.hpp"
 
 using namespace std;
@@ -24,7 +24,6 @@ using namespace std;
  * @return @a result vector of points, the sliced out vector of points
  * @note the original vector @a P remains unchanged during this process
 */
-
 vector<Point> slice(int i, int j, vector<Point> P);
 
 /**
@@ -32,7 +31,6 @@ vector<Point> slice(int i, int j, vector<Point> P);
  * @param[in] P vector of Points
  * @return @a error
 */
-
 double cal_err(vector<Point> P);
 
 /**
@@ -43,8 +41,7 @@ double cal_err(vector<Point> P);
  * @param[in] Err vector of vector of double, gives the error for different segments
  * @note @a M is given as the output, that is, it is calculated for index @a j
 */
-
-void OPT(int j, double cost, vector<double>& M,vector<vector<double>> Err);
+void OPT(int j, double cost, vector<double> &M, vector<vector<double>> Err);
 
 /**
  * @brief Driver function for @a OPT and also calculates error for all possible (start, end) pairs
@@ -54,8 +51,7 @@ void OPT(int j, double cost, vector<double>& M,vector<vector<double>> Err);
  * @param[out] Err vector of vector of double, stores the error values corresponding to every ( @a i, @a j ) pairs 
  * @note @a M and @a Err are the outputs for the functions. Err[i][j] for any given i and j refers to the error a segment starting from point on i-th index upto point on (i+j+1)-th index gets.
 */
-
-void Segmented_Least_Square(vector<Point> P, double cost, vector<double>& M, vector<vector<double>>& Err);
+void Segmented_Least_Square(vector<Point> P, double cost, vector<double> &M, vector<vector<double>> &Err);
 
 /**
  * @brief recursively finds the best possible partitions of points, given @a M penalty at each index, @a P input point set, @a Err error for all possible segments of points
@@ -67,7 +63,6 @@ void Segmented_Least_Square(vector<Point> P, double cost, vector<double>& M, vec
  * @param[out] result vector of vector of points, gives the final optimal partitions for the set of points
  * @note @a result gives a vector of partitions where each partition is a vector of points belonging to the same partition.
 */
-
-void Find_Segment(int j, vector<Point> P, vector<double> M, double cost, vector<vector<double>> Err, vector<vector<Point>>& result);
+void Find_Segment(int j, vector<Point> P, vector<double> M, double cost, vector<vector<double>> Err, vector<vector<Point>> &result);
 
 #endif
