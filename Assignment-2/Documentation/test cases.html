@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DAA Assignment 2</title>
+  <meta name="description" content="DAA-1">
+  <meta name="author" content="AAAP">
+  <link rel="stylesheet" href="main.css?v=1.0">
+</head>
+<body>
+  <div id="navbar" class="navbar">
+    <!--<a class="active" href="#home">Home</a>-->
+    <a class="active"  href="test cases.html">Test Cases</a>
+    <a href="algorithm.html">Algorithm</a>
+    <a href="documentation.html">Documentation</a>
+    <a href="timing.html">Timing Analysis</a>
+    <a href="remarks.html">Remarks</a>
+    <a href="references.html">References</a>
+    <a href="main.html" style="float:inline-end;">Back</a>
+  </div>   
+
+  <h1 ><u>Test Cases</u></h1>
+  <div class="tcrow">
+    <div class="tccolumn">
+  <table>
+    <tr><th>Text to Save:</th></tr>
+    <tr>
+      <td colspan="3">
+        <textarea id="inputTextToSave" placeholder="enter test case..."cols="80" rows="15"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>File to Run:</td> 
+      <td><input id="fileNameToRunAs" placeholder="run 'name'.txt"></input></td> 
+      <td><button type="button" onclick="TestRun()">Run Test Case</button></td>
+    </tr>
+    <tr>
+      <td>Save File as:</td>
+      <td><input id="inputFileNameToSaveAs" placeholder="save 'name'.txt"></input></td>
+      <td><button onclick="saveTextAsFile()">Save Text to File</button></td>
+    </tr>
+ 
+  <tr>
+    <td>Load Image:</td><td><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" ></td>
+  </tr>
+  </table>
+  </div>
+  <div class="tccolumn"><img id="tcoutput"/></div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 01</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase01.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase01.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 02</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase02.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase02.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 03</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase03.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase03.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 04</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase04.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase04.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 05</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase05.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase05.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 06</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase06.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase06.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 07</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase07.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase07.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 08</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase08.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase08.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 09</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase09.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase09.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<div class="tccontainer">
+  <p><u><br>Testcase 10</u></p>
+  <div class="tccolumn4" style="overflow:hidden;">
+    <p><object class="tcobject" data="./test/testcase10.txt" style="overflow:hidden;"></object></p>
+  </div>
+  <div class="tccolumn6">
+    <img src="./test/testcase10.txt_out.png" width=100%/>
+  </div>
+</div>
+
+<script type="text/javascript" >
+  function saveTextAsFile(){  
+    var textToSave = document.getElementById("inputTextToSave").value;
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+  }
+  function destroyClickedElement(event){
+    document.body.removeChild(event.target);
+  }
+  var loadFile = function(event) {
+      var image = document.getElementById('tcoutput');
+      image.src = URL.createObjectURL(event.target.files[0]);
+  };
+    function TestRun(){
+    alert('running testcase');; 
+    var textToRun = document.getElementById("fileNameToRunAs").value; 
+    var objShell = new ActiveXObject("WSCRIPT.Shell").Run("cmd.exe /k cd C://Users//Abhishek//Desktop//DAA//DAA-Assignments//Assignment-2 & python visualization.py "+textToRun);
+    alert('finished visualization');; 
+  }
+</script>
+</body>
+</html>
+<!--onclick="transitionToPage('menu.html')"
+-->

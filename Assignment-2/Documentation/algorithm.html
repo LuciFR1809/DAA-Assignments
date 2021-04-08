@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DAA Assignment 2</title>
+  <meta name="description" content="DAA-1">
+  <meta name="author" content="AAAP">
+  <link rel="stylesheet" href="main.css?v=1.0">
+</head>
+<body>
+    <div id="navbar" class="navbar">
+        <!--<a class="active" href="#home">Home</a>-->
+        <a href="test cases.html">Test Cases</a>
+        <a class="active"  href="algorithm.html">Algorithm</a>
+        <a href="documentation.html">Documentation</a>
+        <a href="timing.html">Timing Analysis</a>
+        <a href="remarks.html">Remarks</a>
+        <a href="references.html">References</a>
+        <a href="main.html" style="float:inline-end;">Back</a>
+    </div>    
+    <h1 ><u>Algorithm Analysis</u></h1>
+    <div class="dival">
+      <h4><u>Problem Statement</u></h4>
+      <p>Given a set of rectangles the algorithm aims to find the area - defined as "measure" and the perimeter defined as "contour" of the union of the set. </p>
+    </div>
+      <div class="dival">
+<h4><u>Algorithm Abstract</u></h4>
+<p>The Algorithm is based on Divide and conquer paradigm. The logic behind the algorithm is to divide x-interval on the basis of number of the left and right edges. Base case is when a partition contains only one edge from the set of edges. The agorithm defines a new data structure named stripes which consists of an x-interval, a y-interval and x_union - a real number in case of calculating measure, a ctree whose leaf nodes store coordinates of an interval.</p>
+</div>
+
+  <div class="dival">
+    <h4><u>Intution</u></h4>
+    <p>The x_union of Stripe is merged for both measure and contour problems.x_union for merge gives the length of x-interval for a given stripe which is included inside some rectangle, simply a multiplication of x_union with length of y-interval gives us the measure</p>
+    <p>The x_union of Stripe for contour problem is a ctree whose leaf node stores coordinate and also whether it is the staring point of the interval of]r the end point. Traversal of this tree gives us the coordinates , after which we make intervals and check for those which make contour pieces. The contour pieces gives all the horizontal pieces of the contour and all that is left is to connect them with vertical line segments</p>
+    </div>
+      <script src="main.js">
+          
+      </script>
+</body>
+</html>
+<!--onclick="transitionToPage('menu.html')"-->

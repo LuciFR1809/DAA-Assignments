@@ -1,0 +1,24 @@
+DIVIDE : O(1)
+    O(1) :STRIPES divide
+CONQUER : 2*T(N/2)
+   O(1) : STRIPES Base Case
+   2*T(N/2) : STRIPES Recursive step
+MERGE : O(N2)
+    O(N) : set operations like intersection, union, difference
+    O(N2) : copy, blacken, concat functions are main functions useful for merge 
+EXTRA Functions : 
+    O(1) : RECTANGLE_DAC
+    O(N) : Measure - calculates measure given all the stripes; Contour, contour_pieces - calculate contour pieces given stripes
+    O(P2) : PostProcess
+
+where N = Total Number of left and right edges
+      P = Total Number of Contour Pieces
+
+Final Time COmplexity for STRIPES Functions
+
+T(N) = O(1) + 2*T(N/2) + O(N2) 
+
+this can be solved to get T(N) = O(N2)
+
+therefore the final complexity of the whole algorithm is O(1)*O(N2) + O(N) + O(P2) 
+which is equal to O(N2+P2) 
