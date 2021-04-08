@@ -1,3 +1,13 @@
+/**
+ * @file main.cpp
+ * Main file of the program. Contains the driver code for reading and writing to file.
+ * 
+ * @authors Kumar Pranjal 2018A7PS0163H
+ * @authors Ashna Swaika 2018A7PS0027H
+ * @authors Abhishek Bapna 2018A7PS0184H
+ * @authors Ashish Verma 2018A7PS0009H
+ */
+
 #include <iostream>
 #include <fstream>
 #include <bits/stdc++.h>
@@ -6,6 +16,12 @@
 
 using namespace std;
 
+/**
+ * @brief Driver function to read the file, compute partitions and write back to another file.
+ * @param[in] argc Number of arguments
+ * @param[in] argv Name of the file to open
+ * @return (int) 0
+ */
 int main(int argc, char *argv[])
 {
     string f = argv[1];
