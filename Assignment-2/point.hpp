@@ -1,6 +1,6 @@
 /**
  * @file point.hpp
- * Header file defining the class Point
+ * @brief Header file defining the class Point
  * 
  * @authors Kumar Pranjal 2018A7PS0163H
  * @authors Ashna Swaika 2018A7PS0027H
@@ -11,10 +11,14 @@
 #ifndef POINT_HPP
 #define POINT_HPP
 
+/// Class to represent points
 class Point
 {
 public:
-    double x, y;
+    /// Point object is represented as (x, y)
+    double x;
+    /// Point object is represented as (x, y)
+    double y;
 
     /**
      * @brief Default constructor.

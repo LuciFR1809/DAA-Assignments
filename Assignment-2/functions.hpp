@@ -1,6 +1,6 @@
 /**
  * @file functions.hpp
- * Header file for including functions required to find the segments for given set of input points
+ * @brief Header file for including functions required to find the segments for given set of input points
  * 
  * @authors Kumar Pranjal 2018A7PS0163H
  * @authors Ashna Swaika 2018A7PS0027H

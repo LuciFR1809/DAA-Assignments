@@ -1,6 +1,6 @@
 /**
  * @file main.cpp
- * Main file of the program. Contains the driver code for reading and writing to file.
+ * @brief Main file of the program. Contains the driver code for reading and writing to file.
  * 
  * @authors Kumar Pranjal 2018A7PS0163H
  * @authors Ashna Swaika 2018A7PS0027H

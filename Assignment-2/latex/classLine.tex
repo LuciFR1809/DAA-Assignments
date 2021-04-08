@@ -1,0 +1,96 @@
+\hypertarget{classLine}{}\doxysection{Line Class Reference}
+\label{classLine}\index{Line@{Line}}
+
+
+Class to represent lines.  
+
+
+
+
+{\ttfamily \#include $<$line.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLine_acc11b8a429d8cdd63ba6803dff5602b3}\label{classLine_acc11b8a429d8cdd63ba6803dff5602b3}} 
+\mbox{\hyperlink{classLine_acc11b8a429d8cdd63ba6803dff5602b3}{Line}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLine_a55f419a5a766e0fb5478e705a736899d}{Line}} (double \mbox{\hyperlink{classLine_aac9f3d76356545f5ab1cdc3fd52abd22}{a}}, double \mbox{\hyperlink{classLine_ac6de6683110d1c49d6d995476fdd31ed}{b}})
+\begin{DoxyCompactList}\small\item\em Constructor accepting parameters {\itshape a} -\/ slope and {\itshape b} -\/ y-\/intercept of the line. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLine_a6b903a8a523184798c673196dd3826f7}{Line}} (vector$<$ \mbox{\hyperlink{classPoint}{Point}} $>$ P)
+\begin{DoxyCompactList}\small\item\em Constructor accepting vector of Points {\itshape P} and finding best fit line through them. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classLine_a5011fc2a1df2bfa9b7d8a249494831a3}{err}} (\mbox{\hyperlink{classPoint}{Point}} P)
+\begin{DoxyCompactList}\small\item\em Function to find error of point {\itshape P} with \mbox{\hyperlink{classLine}{Line}} . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLine_aac9f3d76356545f5ab1cdc3fd52abd22}\label{classLine_aac9f3d76356545f5ab1cdc3fd52abd22}} 
+double \mbox{\hyperlink{classLine_aac9f3d76356545f5ab1cdc3fd52abd22}{a}}
+\begin{DoxyCompactList}\small\item\em Using y = a$\ast$x + b equation of line. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLine_ac6de6683110d1c49d6d995476fdd31ed}\label{classLine_ac6de6683110d1c49d6d995476fdd31ed}} 
+double \mbox{\hyperlink{classLine_ac6de6683110d1c49d6d995476fdd31ed}{b}}
+\begin{DoxyCompactList}\small\item\em Using y = a$\ast$x + b equation of line. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to represent lines. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLine_a55f419a5a766e0fb5478e705a736899d}\label{classLine_a55f419a5a766e0fb5478e705a736899d}} 
+\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Line\+::\+Line (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor accepting parameters {\itshape a} -\/ slope and {\itshape b} -\/ y-\/intercept of the line. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & slope \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & y-\/intercept \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLine_a6b903a8a523184798c673196dd3826f7}\label{classLine_a6b903a8a523184798c673196dd3826f7}} 
+\index{Line@{Line}!Line@{Line}}
+\index{Line@{Line}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{Line()}{Line()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Line\+::\+Line (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classPoint}{Point}} $>$}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor accepting vector of Points {\itshape P} and finding best fit line through them. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em P} & vector of \mbox{\hyperlink{classPoint}{Point}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLine_a5011fc2a1df2bfa9b7d8a249494831a3}\label{classLine_a5011fc2a1df2bfa9b7d8a249494831a3}} 
+\index{Line@{Line}!err@{err}}
+\index{err@{err}!Line@{Line}}
+\doxysubsubsection{\texorpdfstring{err()}{err()}}
+{\footnotesize\ttfamily double Line\+::err (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPoint}{Point}}}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to find error of point {\itshape P} with \mbox{\hyperlink{classLine}{Line}} . 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em P} & \mbox{\hyperlink{classPoint}{Point}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape error} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{line_8hpp}{line.\+hpp}}\end{DoxyCompactItemize}

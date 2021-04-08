@@ -1,6 +1,6 @@
 ##
  # @file visualization.py
- # Python file for visualization of the testcase.
+ # @brief Python file for visualization of the testcase.
  # Contains the driver code for reading the file and plotting it.
  # 
  # @authors Kumar Pranjal 2018A7PS0163H

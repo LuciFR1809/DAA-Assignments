@@ -1,6 +1,6 @@
 /**
  * @file line.hpp
- * Header file defining the class line
+ * @brief Header file defining the class Line
  * 
  * @authors Kumar Pranjal 2018A7PS0163H
  * @authors Ashna Swaika 2018A7PS0027H
@@ -17,11 +17,14 @@
 
 using namespace std;
 
+/// Class to represent lines
 class Line
 {
 public:
     /// Using y = a*x + b equation of line
-    double a, b;
+    double a;
+    /// Using y = a*x + b equation of line
+    double b;
 
     /**
      * @brief Default constructor.
