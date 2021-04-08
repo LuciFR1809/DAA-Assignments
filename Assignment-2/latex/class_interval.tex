@@ -1,0 +1,167 @@
+\hypertarget{class_interval}{}\doxysection{Interval Class Reference}
+\label{class_interval}\index{Interval@{Interval}}
+
+
+\mbox{\hyperlink{class_interval}{Interval}} object is used in various phases of the algorithm.  
+
+
+
+
+{\ttfamily \#include $<$interval.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_interval_ae48b9a9e9f672f81977627b609e32429}\label{class_interval_ae48b9a9e9f672f81977627b609e32429}} 
+\mbox{\hyperlink{class_interval_ae48b9a9e9f672f81977627b609e32429}{Interval}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_interval_a4e82cbe64965f9b25580e28a875e3792}{Interval}} (\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{class_interval_a56da5c7b7a1729e7b6de085eab49f043}{lower}}, \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{class_interval_ae8cbda8795f6211968eb2d99341d6094}{upper}})
+\begin{DoxyCompactList}\small\item\em Constructor accepting lower and upper endpoints. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interval_a76dc246cf31111b417849385fe545151}{operator==}} (const \mbox{\hyperlink{class_interval}{Interval}} \&I) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{class_interval}{Interval}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interval_a3b48bfb3ac0ce9a6d958efa8e1ee48ab}{operator!=}} (const \mbox{\hyperlink{class_interval}{Interval}} \&I) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{class_interval}{Interval}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interval_a0101520caa330977254f7eaa58be286e}{operator$<$}} (const \mbox{\hyperlink{class_interval}{Interval}} \&I) const
+\begin{DoxyCompactList}\small\item\em Function to order the \mbox{\hyperlink{class_interval}{Interval}} objects. Priority for ordering -\/ {\itshape lower} $>$ {\itshape upper}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_interval_abc61667b9358f3a10e033498ed5d3ade}{is\+Superset\+Of}} (const \mbox{\hyperlink{class_interval}{Interval}} \&I) const
+\begin{DoxyCompactList}\small\item\em Function to check whether {\itshape this} \mbox{\hyperlink{class_interval}{Interval}} is superset of \mbox{\hyperlink{class_interval}{Interval}} {\itshape I} . \end{DoxyCompactList}\item 
+std\+::set$<$ \mbox{\hyperlink{class_interval}{Interval}} $>$ \mbox{\hyperlink{class_interval_a66b79c963eff13021de76508ad460407}{intersection}} (std\+::set$<$ \mbox{\hyperlink{class_interval}{Interval}} $>$ J)
+\begin{DoxyCompactList}\small\item\em Function to find intersection between {\itshape this} \mbox{\hyperlink{class_interval}{Interval}} and set of \mbox{\hyperlink{class_interval}{Interval}} {\itshape J} . \end{DoxyCompactList}\item 
+std\+::set$<$ \mbox{\hyperlink{class_interval}{Interval}} $>$ \mbox{\hyperlink{class_interval_a5ef6fc11bef8258ebd97b6ca5d938603}{difference}} (std\+::set$<$ \mbox{\hyperlink{class_interval}{Interval}} $>$ J)
+\begin{DoxyCompactList}\small\item\em Function to find difference between {\itshape this} \mbox{\hyperlink{class_interval}{Interval}} and set of \mbox{\hyperlink{class_interval}{Interval}} {\itshape J} . \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_interval_a56da5c7b7a1729e7b6de085eab49f043}\label{class_interval_a56da5c7b7a1729e7b6de085eab49f043}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{class_interval_a56da5c7b7a1729e7b6de085eab49f043}{lower}}
+\begin{DoxyCompactList}\small\item\em lower endpoint of interval \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_interval_ae8cbda8795f6211968eb2d99341d6094}\label{class_interval_ae8cbda8795f6211968eb2d99341d6094}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{class_interval_ae8cbda8795f6211968eb2d99341d6094}{upper}}
+\begin{DoxyCompactList}\small\item\em higher endpoint of interval \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_interval}{Interval}} object is used in various phases of the algorithm. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_interval_a4e82cbe64965f9b25580e28a875e3792}\label{class_interval_a4e82cbe64965f9b25580e28a875e3792}} 
+\index{Interval@{Interval}!Interval@{Interval}}
+\index{Interval@{Interval}!Interval@{Interval}}
+\doxysubsubsection{\texorpdfstring{Interval()}{Interval()}}
+{\footnotesize\ttfamily Interval\+::\+Interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{lower,  }\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{upper }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor accepting lower and upper endpoints. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em lower} & lower endpoint \\
+\hline
+\mbox{\texttt{ in}}  & {\em upper} & upper endpoint \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_interval_a5ef6fc11bef8258ebd97b6ca5d938603}\label{class_interval_a5ef6fc11bef8258ebd97b6ca5d938603}} 
+\index{Interval@{Interval}!difference@{difference}}
+\index{difference@{difference}!Interval@{Interval}}
+\doxysubsubsection{\texorpdfstring{difference()}{difference()}}
+{\footnotesize\ttfamily std\+::set$<$\mbox{\hyperlink{class_interval}{Interval}}$>$ Interval\+::difference (\begin{DoxyParamCaption}\item[{std\+::set$<$ \mbox{\hyperlink{class_interval}{Interval}} $>$}]{J }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to find difference between {\itshape this} \mbox{\hyperlink{class_interval}{Interval}} and set of \mbox{\hyperlink{class_interval}{Interval}} {\itshape J} . 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em J} & set of \mbox{\hyperlink{class_interval}{Interval}} to find difference with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of \mbox{\hyperlink{class_interval}{Interval}} after calculating difference 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_interval_a66b79c963eff13021de76508ad460407}\label{class_interval_a66b79c963eff13021de76508ad460407}} 
+\index{Interval@{Interval}!intersection@{intersection}}
+\index{intersection@{intersection}!Interval@{Interval}}
+\doxysubsubsection{\texorpdfstring{intersection()}{intersection()}}
+{\footnotesize\ttfamily std\+::set$<$\mbox{\hyperlink{class_interval}{Interval}}$>$ Interval\+::intersection (\begin{DoxyParamCaption}\item[{std\+::set$<$ \mbox{\hyperlink{class_interval}{Interval}} $>$}]{J }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to find intersection between {\itshape this} \mbox{\hyperlink{class_interval}{Interval}} and set of \mbox{\hyperlink{class_interval}{Interval}} {\itshape J} . 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em J} & set of \mbox{\hyperlink{class_interval}{Interval}} to find intersection with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+set of \mbox{\hyperlink{class_interval}{Interval}} after calculating intersection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_interval_abc61667b9358f3a10e033498ed5d3ade}\label{class_interval_abc61667b9358f3a10e033498ed5d3ade}} 
+\index{Interval@{Interval}!isSupersetOf@{isSupersetOf}}
+\index{isSupersetOf@{isSupersetOf}!Interval@{Interval}}
+\doxysubsubsection{\texorpdfstring{isSupersetOf()}{isSupersetOf()}}
+{\footnotesize\ttfamily bool Interval\+::is\+Superset\+Of (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_interval}{Interval}} \&}]{I }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to check whether {\itshape this} \mbox{\hyperlink{class_interval}{Interval}} is superset of \mbox{\hyperlink{class_interval}{Interval}} {\itshape I} . 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em I} & parameter \mbox{\hyperlink{class_interval}{Interval}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape true} if {\itshape this} is superset of {\itshape I} , else {\itshape false} 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+It checks for superset and not proper superset 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_interval_a3b48bfb3ac0ce9a6d958efa8e1ee48ab}\label{class_interval_a3b48bfb3ac0ce9a6d958efa8e1ee48ab}} 
+\index{Interval@{Interval}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Interval@{Interval}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Interval\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_interval}{Interval}} \&}]{I }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{class_interval}{Interval}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if intervals are different, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_interval_a0101520caa330977254f7eaa58be286e}\label{class_interval_a0101520caa330977254f7eaa58be286e}} 
+\index{Interval@{Interval}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Interval@{Interval}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Interval\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_interval}{Interval}} \&}]{I }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to order the \mbox{\hyperlink{class_interval}{Interval}} objects. Priority for ordering -\/ {\itshape lower} $>$ {\itshape upper}. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if first interval $<$ second interval, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_interval_a76dc246cf31111b417849385fe545151}\label{class_interval_a76dc246cf31111b417849385fe545151}} 
+\index{Interval@{Interval}!operator==@{operator==}}
+\index{operator==@{operator==}!Interval@{Interval}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Interval\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_interval}{Interval}} \&}]{I }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{class_interval}{Interval}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if intervals are same, else {\itshape false} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Academics/\+S\+E\+M6/\+D\+A\+A C\+S F364/\+Assignment-\/1/\+D\+A\+A-\/\+Assignment-\/1/\mbox{\hyperlink{interval_8hpp}{interval.\+hpp}}\end{DoxyCompactItemize}

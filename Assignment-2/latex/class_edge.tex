@@ -1,0 +1,111 @@
+\hypertarget{class_edge}{}\doxysection{Edge Class Reference}
+\label{class_edge}\index{Edge@{Edge}}
+
+
+\mbox{\hyperlink{class_edge}{Edge}} object is used for creating \mbox{\hyperlink{class_rectangle}{Rectangle}}.  
+
+
+
+
+{\ttfamily \#include $<$edge.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_edge_a3106b11d60125009dbf7a738ce540fdf}\label{class_edge_a3106b11d60125009dbf7a738ce540fdf}} 
+\mbox{\hyperlink{class_edge_a3106b11d60125009dbf7a738ce540fdf}{Edge}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_edge_ab5a279de66442511d407efa8a0823eb4}{Edge}} (\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} x, \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} y\+\_\+top, \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} y\+\_\+bottom, \mbox{\hyperlink{edge_8hpp_a424a64da753a3cd5e96ab8d0553a04c4}{Edge\+Type}} \mbox{\hyperlink{class_edge_a096ec5b8d15bcd30e53226ebc29c9753}{side}})
+\begin{DoxyCompactList}\small\item\em Constructor accepting four parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_edge_a5292fbc2bc70629fc1bacc251cae695a}{operator==}} (const \mbox{\hyperlink{class_edge}{Edge}} \&E) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{class_edge}{Edge}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_edge_a391e70273aaae03926e1bc57fafe68c2}{operator!=}} (const \mbox{\hyperlink{class_edge}{Edge}} \&E) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{class_edge}{Edge}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_edge_a199a7a32bf4d868a3c1c50d95899b65e}{operator$<$}} (const \mbox{\hyperlink{class_edge}{Edge}} \&E) const
+\begin{DoxyCompactList}\small\item\em Function to order the \mbox{\hyperlink{class_edge}{Edge}} objects. Priority for ordering -\/ {\itshape cord} $>$ {\itshape interval} $>$ {\itshape side}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_edge_a98d3081961dd6d7ceb069e4b046b9ac2}\label{class_edge_a98d3081961dd6d7ceb069e4b046b9ac2}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{class_edge_a98d3081961dd6d7ceb069e4b046b9ac2}{cord}}
+\begin{DoxyCompactList}\small\item\em Common coordinate of the endpoints. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_edge_aea4b96c270f7cf0ab157747898cd9d6b}\label{class_edge_aea4b96c270f7cf0ab157747898cd9d6b}} 
+\mbox{\hyperlink{class_interval}{Interval}} \mbox{\hyperlink{class_edge_aea4b96c270f7cf0ab157747898cd9d6b}{interval}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_interval}{Interval}} by which the edge spans. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_edge_a096ec5b8d15bcd30e53226ebc29c9753}\label{class_edge_a096ec5b8d15bcd30e53226ebc29c9753}} 
+\mbox{\hyperlink{edge_8hpp_a424a64da753a3cd5e96ab8d0553a04c4}{Edge\+Type}} \mbox{\hyperlink{class_edge_a096ec5b8d15bcd30e53226ebc29c9753}{side}}
+\begin{DoxyCompactList}\small\item\em Stores which side the edge is present. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_edge}{Edge}} object is used for creating \mbox{\hyperlink{class_rectangle}{Rectangle}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_edge_ab5a279de66442511d407efa8a0823eb4}\label{class_edge_ab5a279de66442511d407efa8a0823eb4}} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{x,  }\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{y\+\_\+top,  }\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{y\+\_\+bottom,  }\item[{\mbox{\hyperlink{edge_8hpp_a424a64da753a3cd5e96ab8d0553a04c4}{Edge\+Type}}}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor accepting four parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & common coordinate of edge \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+\_\+top} & second endpoint of {\itshape interval} \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+\_\+bottom} & first endpoint of {\itshape interval} \\
+\hline
+\mbox{\texttt{ in}}  & {\em side} & side of rectangle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_edge_a391e70273aaae03926e1bc57fafe68c2}\label{class_edge_a391e70273aaae03926e1bc57fafe68c2}} 
+\index{Edge@{Edge}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Edge\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_edge}{Edge}} \&}]{E }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{class_edge}{Edge}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if edges are different, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a199a7a32bf4d868a3c1c50d95899b65e}\label{class_edge_a199a7a32bf4d868a3c1c50d95899b65e}} 
+\index{Edge@{Edge}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Edge\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_edge}{Edge}} \&}]{E }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to order the \mbox{\hyperlink{class_edge}{Edge}} objects. Priority for ordering -\/ {\itshape cord} $>$ {\itshape interval} $>$ {\itshape side}. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if first edge $<$ second edge, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a5292fbc2bc70629fc1bacc251cae695a}\label{class_edge_a5292fbc2bc70629fc1bacc251cae695a}} 
+\index{Edge@{Edge}!operator==@{operator==}}
+\index{operator==@{operator==}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Edge\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_edge}{Edge}} \&}]{E }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{class_edge}{Edge}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if edges are same, else {\itshape false} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Academics/\+S\+E\+M6/\+D\+A\+A C\+S F364/\+Assignment-\/1/\+D\+A\+A-\/\+Assignment-\/1/\mbox{\hyperlink{edge_8hpp}{edge.\+hpp}}\end{DoxyCompactItemize}

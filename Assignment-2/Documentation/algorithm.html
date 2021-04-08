@@ -13,25 +13,31 @@
         <a href="test cases.html">Test Cases</a>
         <a class="active"  href="algorithm.html">Algorithm</a>
         <a href="documentation.html">Documentation</a>
-        <a href="timing.html">Timing Analysis</a>
-        <a href="remarks.html">Remarks</a>
-        <a href="references.html">References</a>
+        <a href="timing.html">Complexity Analysis</a>
+        <a href="remarks.html">Remarks & Refernces</a>
         <a href="main.html" style="float:inline-end;">Back</a>
     </div>    
     <h1 ><u>Algorithm Analysis</u></h1>
     <div class="dival">
       <h4><u>Problem Statement</u></h4>
-      <p>Given a set of rectangles the algorithm aims to find the area - defined as "measure" and the perimeter defined as "contour" of the union of the set. </p>
+      <p>Implement the Segmented Least Squares Algorithm & a visualizer to show input points & fitted lines</p>
     </div>
       <div class="dival">
 <h4><u>Algorithm Abstract</u></h4>
-<p>The Algorithm is based on Divide and conquer paradigm. The logic behind the algorithm is to divide x-interval on the basis of number of the left and right edges. Base case is when a partition contains only one edge from the set of edges. The agorithm defines a new data structure named stripes which consists of an x-interval, a y-interval and x_union - a real number in case of calculating measure, a ctree whose leaf nodes store coordinates of an interval.</p>
+<p>segmented least square algorithm attempts to find the best fit line/ lines for a set of points with continuous x coordinates, by finding the best possible segments in the set of points for which the error given by best fit line is minimum. </p>
 </div>
-
+<div class="dival">
+  <h4><u>Recurrance</u></h4>
+  <p>OPT(j)=min<sub>1≤i≤j</sub>(e<sub>i,j</sub>+C+OPT[i-1]) </p>
+  <p> OPT(j) denote the minimum cost for points p<sub>1</sub>, p<sub>2</sub>, …, p<sub>j</sub><br/>
+    e<sub>i,j</sub> denote the minimum squared error for points p<sub>i</sub>, p<sub>i+1</sub>, …, p<sub>j</sub><br/>
+    C is the input penalty multiplier
+  </p>
+  </div>
   <div class="dival">
     <h4><u>Intution</u></h4>
-    <p>The x_union of Stripe is merged for both measure and contour problems.x_union for merge gives the length of x-interval for a given stripe which is included inside some rectangle, simply a multiplication of x_union with length of y-interval gives us the measure</p>
-    <p>The x_union of Stripe for contour problem is a ctree whose leaf node stores coordinate and also whether it is the staring point of the interval of]r the end point. Traversal of this tree gives us the coordinates , after which we make intervals and check for those which make contour pieces. The contour pieces gives all the horizontal pieces of the contour and all that is left is to connect them with vertical line segments</p>
+    <p>The key point in defining the recurrence is that the last point is part of the last segment hence, if we can find best possible partition for all points before the last segment we have solved the problem. </p>
+    <p> The concept of penalty is used to find which segments give least error, where penalty is calculated based on error given by best fit line of current segment , a constant cost function and errors by all the previous segments.</p>
     </div>
       <script src="main.js">
           

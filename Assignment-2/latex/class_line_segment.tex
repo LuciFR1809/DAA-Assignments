@@ -1,0 +1,104 @@
+\hypertarget{class_line_segment}{}\doxysection{Line\+Segment Class Reference}
+\label{class_line_segment}\index{LineSegment@{LineSegment}}
+
+
+\mbox{\hyperlink{class_line_segment}{Line\+Segment}} object is used for contour calculation.  
+
+
+
+
+{\ttfamily \#include $<$line\+\_\+segment.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_line_segment_a4c2da2ff2d3979f28bfcb24948a8e6a9}\label{class_line_segment_a4c2da2ff2d3979f28bfcb24948a8e6a9}} 
+\mbox{\hyperlink{class_line_segment_a4c2da2ff2d3979f28bfcb24948a8e6a9}{Line\+Segment}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_line_segment_ac911cd6f6b979b84025cd211f85c60a9}{Line\+Segment}} (\mbox{\hyperlink{class_interval}{Interval}} in, \mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{class_line_segment_a3a7cab7d844c4f98c83b0c3c70fd4c0e}{cord}})
+\begin{DoxyCompactList}\small\item\em Constructor accepting two parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_line_segment_adb7bc01561a19194776b382a0438dcc5}{operator==}} (const \mbox{\hyperlink{class_line_segment}{Line\+Segment}} \&L) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{class_line_segment}{Line\+Segment}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_line_segment_a7d61f6fa83feb9740f8aff26f2e4a691}{operator!=}} (const \mbox{\hyperlink{class_line_segment}{Line\+Segment}} \&L) const
+\begin{DoxyCompactList}\small\item\em Compares two \mbox{\hyperlink{class_line_segment}{Line\+Segment}} objects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_line_segment_afa79bbaa90f99e77c823b57a880a3f0d}{operator$<$}} (const \mbox{\hyperlink{class_line_segment}{Line\+Segment}} \&L) const
+\begin{DoxyCompactList}\small\item\em Function to order the \mbox{\hyperlink{class_line_segment}{Line\+Segment}} objects. Priority for ordering -\/ {\itshape cord} $>$ {\itshape interval}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_line_segment_a2172ca55e87808f91d9b5832527dc82b}\label{class_line_segment_a2172ca55e87808f91d9b5832527dc82b}} 
+\mbox{\hyperlink{class_interval}{Interval}} \mbox{\hyperlink{class_line_segment_a2172ca55e87808f91d9b5832527dc82b}{interval}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_interval}{Interval}} by which the line segment spans. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_line_segment_a3a7cab7d844c4f98c83b0c3c70fd4c0e}\label{class_line_segment_a3a7cab7d844c4f98c83b0c3c70fd4c0e}} 
+\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}} \mbox{\hyperlink{class_line_segment_a3a7cab7d844c4f98c83b0c3c70fd4c0e}{cord}}
+\begin{DoxyCompactList}\small\item\em Common coordinate of the endpoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_line_segment}{Line\+Segment}} object is used for contour calculation. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_line_segment_ac911cd6f6b979b84025cd211f85c60a9}\label{class_line_segment_ac911cd6f6b979b84025cd211f85c60a9}} 
+\index{LineSegment@{LineSegment}!LineSegment@{LineSegment}}
+\index{LineSegment@{LineSegment}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{LineSegment()}{LineSegment()}}
+{\footnotesize\ttfamily Line\+Segment\+::\+Line\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_interval}{Interval}}}]{in,  }\item[{\mbox{\hyperlink{coord_8hpp_ac22461b2c8e5b53fa7ff1384513748a2}{coord}}}]{cord }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor accepting two parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em in} & \mbox{\hyperlink{class_interval}{Interval}} of line segment \\
+\hline
+\mbox{\texttt{ in}}  & {\em cord} & coordinate of line segment \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_line_segment_a7d61f6fa83feb9740f8aff26f2e4a691}\label{class_line_segment_a7d61f6fa83feb9740f8aff26f2e4a691}} 
+\index{LineSegment@{LineSegment}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Line\+Segment\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_line_segment}{Line\+Segment}} \&}]{L }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{class_line_segment}{Line\+Segment}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if line segments are different, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_line_segment_afa79bbaa90f99e77c823b57a880a3f0d}\label{class_line_segment_afa79bbaa90f99e77c823b57a880a3f0d}} 
+\index{LineSegment@{LineSegment}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Line\+Segment\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_line_segment}{Line\+Segment}} \&}]{L }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Function to order the \mbox{\hyperlink{class_line_segment}{Line\+Segment}} objects. Priority for ordering -\/ {\itshape cord} $>$ {\itshape interval}. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if first line segment $<$ second line segment, else {\itshape false} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_line_segment_adb7bc01561a19194776b382a0438dcc5}\label{class_line_segment_adb7bc01561a19194776b382a0438dcc5}} 
+\index{LineSegment@{LineSegment}!operator==@{operator==}}
+\index{operator==@{operator==}!LineSegment@{LineSegment}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Line\+Segment\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_line_segment}{Line\+Segment}} \&}]{L }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compares two \mbox{\hyperlink{class_line_segment}{Line\+Segment}} objects. 
+
+\begin{DoxyReturn}{Returns}
+{\itshape true} if line segments are same, else {\itshape false} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Academics/\+S\+E\+M6/\+D\+A\+A C\+S F364/\+Assignment-\/1/\+D\+A\+A-\/\+Assignment-\/1/\mbox{\hyperlink{line__segment_8hpp}{line\+\_\+segment.\+hpp}}\end{DoxyCompactItemize}

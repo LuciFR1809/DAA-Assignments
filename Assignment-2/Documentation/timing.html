@@ -13,52 +13,36 @@
             <a href="test cases.html">Test Cases</a>
             <a href="algorithm.html">Algorithm</a>
             <a href="documentation.html">Documentation</a>
-            <a class="active" href="timing.html">Timing Analysis</a>
-            <a href="remarks.html">Remarks</a>
-            <a href="references.html">References</a>
+            <a class="active" href="timing.html">Complexity Analysis</a>
+            <a href="remarks.html">Remarks & Refernces</a>
             <a href="main.html" style="float: inline-end">Back</a>
         </div>
         <h1><u>Timing Analysis</u></h1>
         <img src="./time.png" width="80%" />
         <p class="timing">
-            DIVIDE : <b>O</b><b>(</b>1<b>)</b><br />
-            &emsp;&emsp;<b>O</b><b>(</b>1<b>)</b> :STRIPES divide<br />
-            CONQUER : 2*T<b>(</b>N/2<b>)</b><br />
-            &emsp;&emsp;<b>O</b><b>(</b>1<b>)</b> : STRIPES Base Case<br />
-            &emsp;&emsp;2*T<b>(</b>N/2<b>)</b> : STRIPES Recursive step<br />
-            MERGE : <b>O</b><b>(</b>N<sup>2</sup><b>)</b><br />
-            &emsp;&emsp;<b>O</b><b>(</b>N<b>)</b> : set operations like
-            intersection, union, difference<br />
-            &emsp;&emsp;<b>O</b><b>(</b>N<sup>2</sup><b>)</b> : copy, blacken,
-            concat functions are main functions useful for merge <br />
-            EXTRA Functions : <br />
-            &emsp;&emsp;<b>O</b><b>(</b>1<b>)</b> : RECTANGLE_DAC<br />
-            &emsp;&emsp;<b>O</b><b>(</b>N<b>)</b> : Measure - calculates measure
-            given all the stripes; Contour, contour_pieces - calculate contour
-            pieces given stripes<br />
-            &emsp;&emsp;<b>O</b><b>(</b>P<sup>2</sup><b>)</b> : PostProcess<br />
-
-            where N = Total Number of left and right edges<br />
-            &emsp;&emsp;P = Total Number of Contour Pieces<br />
-
-            Final Time Complexity for STRIPES Functions<br />
-
-            T<b>(</b>N<b>)</b> = <b>O</b><b>(</b>1<b>)</b> + 2*T<b>(</b>N/2<b
-                >)</b
-            >
-            + <b>O</b><b>(</b>N<sup>2</sup><b>)</b> <br />
-
-            this can be solved to get T<b>(</b>N<b>)</b> = <b>O</b><b>(</b>N<sup
-                >2</sup
-            ><b>)</b><br />
-
-            therefore the final complexity of the whole algorithm is <b>O</b
-            ><b>(</b>1<b>)</b>*<b>O</b><b>(</b>N<sup>2</sup><b>)</b> + <b>O</b
-            ><b>(</b>N<b>)</b> + <b>O</b><b>(</b>P<sup>2</sup><b>)</b> <br />
-            which is equal to
-            <i style="color: red"
-                ><b>O</b><b>(</b>N<sup>2</sup>+P<sup>2</sup><b>)</b></i
-            >
+            <u>PRE-PROCESSING</u> :<br /> 
+            &emsp;&emsp;<b>O</b><b>(</b>Nlog(N)<b>)</b>:Initial sorting based on x coordinate <br/>
+            <u>SEGMENTED-LEAST-SQUARE</u> :<br/>
+            &emsp;&emsp;<b>O</b><b>(</b>N<sup>3</sup><b>)</b>:time when finding error of all possible combinations of segments, if a best fit line is made through each one of them <br />
+            &emsp;&emsp;<b>O(</b>N<b>)</b> :The recurrence relation(with use of memoization) <br />
+            <br/>
+            where N = Number Of Coordinates<br />
+            therefore the final time complexity of the whole algorithm is equal to<br/>
+            <i style="color: red;margin-left: 50%;font-size: 30px;"><b>O</b><b>(</b>N<sup>3</sup><b>)</b></i>
+        </p>
+        <h1><u>Space Analysis</u></h1>
+        <img src="./time.png" width="80%" />
+        <p class="timing">
+            <u>M[]</u> :<br /> 
+            &emsp;&emsp;<b>O</b><b>(</b>N<b>)</b>:the array which keeps all the penalty values <br/>
+            <u>err[]</u> :<br/>
+            &emsp;&emsp;<b>O</b><b>(</b>N<sup>2</sup><b>)</b>:keeps the sum of squared error for best fit lines of all combinations of segments <br />
+            <u>final[]</u> :<br/>
+            &emsp;&emsp;<b>O</b><b>(</b>N<b>)</b>:vector of vectors which keeps the final set of segments <br />
+            <br/>
+            where N = Number Of Coordinates<br />
+            therefore the final space complexity of the whole algorithm is equal to<br/>
+            <i style="color: red;margin-left: 50%;font-size: 30px;"><b>O</b><b>(</b>N<sup>2</sup><b>)</b></i>
         </p>
         <script src="main.js"></script>
     </body>
