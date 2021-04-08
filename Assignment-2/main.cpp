@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
             tot_error += e;
             ofp << j.x << " " << j.y << endl;
         }
-        ofp2 << tot_error << " " << L.a << " " << L.b << " " << i.begin()->x << " " << (i.end() - 1)->x << endl;
+        ofp2 <<cost<<" "<<tot_error << " " << L.a << " " << L.b << " " << i.begin()->x << " " << (i.end() - 1)->x << endl;
     }
     ofp.close();
     ofp2.close();
