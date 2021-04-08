@@ -10,17 +10,16 @@ int main(int argc, char *argv[])
 {
     string f = argv[1];
     string filename;
-    filename = "testcases/" + f;
+    filename = "autotestcase/" + f;
     ifstream filep(filename);
     vector<Point> input;
     double cost = strtod(argv[2], NULL);
-    //cout<<f<<" "<<cost;
-    //error : taking last line twice
-    while (!filep.eof())
+    string inp;
+    while (getline(filep, inp))
     {
+        stringstream ss(inp);
         double x, y;
-        filep >> x;
-        filep >> y;
+        ss >> x >> y;
         input.push_back(Point(x, y));
     }
 
@@ -30,8 +29,6 @@ int main(int argc, char *argv[])
 
     input.insert(input.begin(), Point(-INFINITY, -INFINITY));
     int n = input.size() - 1;
-
-    //cout << n << endl;
 
     vector<double> M(n + 1, 0);
     vector<vector<double>> Err;
@@ -51,7 +48,12 @@ int main(int argc, char *argv[])
         ofp << "Partition " << c++ << " : Line [ y = " << L.a << "*x + " << L.b << " ]" << endl;
         for (auto j : i)
         {
-            tot_error += L.err(j);
+            double e = L.err(j);
+            if(isnan(e))
+            {
+                e = 0;
+            }
+            tot_error += e;
             ofp << j.x << " " << j.y << endl;
         }
         ofp2 << tot_error << " " << L.a << " " << L.b << " " << i.begin()->x << " " << (i.end() - 1)->x << endl;
@@ -59,5 +61,3 @@ int main(int argc, char *argv[])
     ofp.close();
     ofp2.close();
 }
-
-// doubt : what to output and how to show final result, how correct is implementation

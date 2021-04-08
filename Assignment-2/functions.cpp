@@ -18,6 +18,10 @@ vector<Point> slice(int i, int j, vector<Point> P)
 
 double cal_err(vector<Point> P)
 {
+    if(P.size() <= 1)
+    {
+        return 0;
+    }
     Line L = Line(P);
 
     double error = 0;
@@ -55,7 +59,7 @@ void Segmented_Least_Square(vector<Point> P, double cost, vector<double> &M, vec
 
     for (int i = 1; i <= n; i++)
     {
-        Err.push_back(vector<double>(n - i + 1, INFINITY)); //if allowing one point then make INFINITY 0
+        Err.push_back(vector<double>(n - i + 1, 0)); //if allowing one point then make INFINITY 0
 
         for (int j = i + 1; j <= n; j++)
             Err[i][j - i] = cal_err(slice(i, j, P));

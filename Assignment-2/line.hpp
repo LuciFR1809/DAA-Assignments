@@ -71,6 +71,10 @@ public:
     double err(Point P)
     {
         double s = P.y - a * P.x - b;
+        if(isnan(s))
+        {
+            s = 0;
+        }
         return s * s;
     }
 };
